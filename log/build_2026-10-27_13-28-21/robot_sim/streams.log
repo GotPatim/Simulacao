@@ -1,0 +1,47 @@
+[0.027s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16
+[0.089s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.798s] Error parsing '/home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim/package.xml':
+[3.600s] Traceback (most recent call last):
+[3.600s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[3.601s]     root = dom.parseString(data)
+[3.601s]            ^^^^^^^^^^^^^^^^^^^^^
+[3.601s]   File "/usr/lib/python3.12/xml/dom/minidom.py", line 1995, in parseString
+[3.602s]     return expatbuilder.parseString(string)
+[3.602s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[3.603s]   File "/usr/lib/python3.12/xml/dom/expatbuilder.py", line 922, in parseString
+[3.603s]     return builder.parseString(string)
+[3.603s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[3.604s]   File "/usr/lib/python3.12/xml/dom/expatbuilder.py", line 220, in parseString
+[3.604s]     parser.Parse(string, True)
+[3.604s] xml.parsers.expat.ExpatError: syntax error: line 1, column 0
+[3.604s] 
+[3.605s] During handling of the above exception, another exception occurred:
+[3.605s] 
+[3.605s] Traceback (most recent call last):
+[3.605s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[3.605s]     main()
+[3.606s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[3.606s]     raise e
+[3.606s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[3.606s]     package = parse_package_string(
+[3.606s]               ^^^^^^^^^^^^^^^^^^^^^
+[3.607s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[3.607s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[3.607s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim/package.xml':
+[3.607s] The manifest contains invalid XML:
+[3.607s] syntax error: line 1, column 0
+[3.690s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[3.691s]   execute_process(/usr/bin/python3
+[3.691s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[3.691s]   /home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim/package.xml
+[3.691s]   /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim/ament_cmake_core/package.cmake)
+[3.691s]   returned error code 1
+[3.691s] Call Stack (most recent call first):
+[3.692s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[3.692s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[3.692s]   CMakeLists.txt:9 (ament_package)
+[3.692s] 
+[3.692s] [0m
+[3.692s] -- Configuring incomplete, errors occurred!
+[3.698s] gmake: *** [Makefile:138: cmake_check_build_system] Error 1
+[3.703s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16

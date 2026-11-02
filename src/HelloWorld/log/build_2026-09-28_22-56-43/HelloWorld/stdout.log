@@ -1,0 +1,36 @@
+running egg_info
+creating build/HelloWorld/HelloWorld.egg-info
+writing build/HelloWorld/HelloWorld.egg-info/PKG-INFO
+writing dependency_links to build/HelloWorld/HelloWorld.egg-info/dependency_links.txt
+writing requirements to build/HelloWorld/HelloWorld.egg-info/requires.txt
+writing top-level names to build/HelloWorld/HelloWorld.egg-info/top_level.txt
+writing manifest file 'build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'
+reading manifest file 'build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'
+writing manifest file 'build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld
+copying HelloWorld/__init__.py -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld
+copying HelloWorld/subscriber.py -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld
+copying HelloWorld/publisher.py -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld
+running install
+running install_lib
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+copying /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld/__init__.py -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+copying /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld/subscriber.py -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+copying /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build/lib/HelloWorld/publisher.py -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld/subscriber.py to subscriber.cpython-312.pyc
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld/publisher.py to publisher.cpython-312.pyc
+running install_data
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/ament_index
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/ament_index/resource_index
+creating /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/ament_index/resource_index/packages
+copying resource/HelloWorld -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/ament_index/resource_index/packages
+copying package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld
+running install_egg_info
+Copying build/HelloWorld/HelloWorld.egg-info to /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages/HelloWorld-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/install.log'

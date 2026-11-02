@@ -1,0 +1,9 @@
+colcon build --packages-select robot_sim
+source install/setup.bash
+ros2 launch robot_sim sim.launch.py
+colcon build --symlink-install --packages-select Movement
+source install/setup.bash
+ros2 run Movement walk --ros-args -p use_sim_time:=true
+
+
+chmod a+wr /dev/tty

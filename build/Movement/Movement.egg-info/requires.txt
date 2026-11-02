@@ -1,0 +1,8 @@
+geometry_msgs
+nav_msgs
+rclpy
+setuptools
+transforms3d
+
+[test]
+pytest

@@ -1,0 +1,25 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/robot_world.sdf
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/bridge.yaml
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/launch/sim.launch.py
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/package_run_dependencies/robot_sim
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/parent_prefix_path/robot_sim
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/ament_prefix_path.sh
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/ament_prefix_path.dsv
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/path.sh
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/path.dsv
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.bash
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.sh
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.zsh
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.dsv
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.dsv
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/packages/robot_sim
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/cmake/robot_simConfig.cmake
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/cmake/robot_simConfig-version.cmake
+-- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.xml

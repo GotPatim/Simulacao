@@ -1,0 +1,2 @@
+[console_scripts]
+walk = Movement.walk:main

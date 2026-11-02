@@ -1,0 +1,9 @@
+source;share/Movement/hook/pythonpath.ps1
+source;share/Movement/hook/pythonpath.dsv
+source;share/Movement/hook/pythonpath.sh
+source;share/Movement/hook/ament_prefix_path.ps1
+source;share/Movement/hook/ament_prefix_path.dsv
+source;share/Movement/hook/ament_prefix_path.sh
+source;../../build/Movement/share/Movement/hook/pythonpath_develop.ps1
+source;../../build/Movement/share/Movement/hook/pythonpath_develop.dsv
+source;../../build/Movement/share/Movement/hook/pythonpath_develop.sh

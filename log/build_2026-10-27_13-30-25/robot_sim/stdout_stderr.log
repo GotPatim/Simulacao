@@ -1,0 +1,26 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim
+-- Install configuration: ""
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/world.sdf
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/bridge.yaml
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/launch
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/launch/sim.launch.py
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/package_run_dependencies/robot_sim
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/parent_prefix_path/robot_sim
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/ament_prefix_path.sh
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/ament_prefix_path.dsv
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/path.sh
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/path.dsv
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.bash
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.sh
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.zsh
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.dsv
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.dsv
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/packages/robot_sim
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/cmake/robot_simConfig.cmake
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/cmake/robot_simConfig-version.cmake
+-- Installing: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.xml

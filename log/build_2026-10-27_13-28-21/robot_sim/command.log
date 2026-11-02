@@ -1,0 +1,2 @@
+Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16
+Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16

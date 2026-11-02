@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+HelloWorld/__init__.py
+HelloWorld/publisher.py
+HelloWorld/subscriber.py
+build/HelloWorld/HelloWorld.egg-info/PKG-INFO
+build/HelloWorld/HelloWorld.egg-info/SOURCES.txt
+build/HelloWorld/HelloWorld.egg-info/dependency_links.txt
+build/HelloWorld/HelloWorld.egg-info/requires.txt
+build/HelloWorld/HelloWorld.egg-info/top_level.txt
+build/HelloWorld/HelloWorld.egg-info/zip-safe
+resource/HelloWorld
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

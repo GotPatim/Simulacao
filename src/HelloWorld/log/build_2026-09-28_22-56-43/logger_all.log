@@ -1,0 +1,90 @@
+[0.303s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.303s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7e4f6941ae10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7e4f69597c50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7e4f69597c50>>)
+[0.408s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.409s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.476s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'HelloWorld'
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.524s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.535s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 287 installed packages in /opt/ros/jazzy
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.638s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'cmake_args' from command line to 'None'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'cmake_target' from command line to 'None'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'cmake_clean_cache' from command line to 'False'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'cmake_clean_first' from command line to 'False'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'cmake_force_configure' from command line to 'False'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'ament_cmake_args' from command line to 'None'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'catkin_cmake_args' from command line to 'None'
+[0.639s] Level 5:colcon.colcon_core.verb:set package 'HelloWorld' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.639s] DEBUG:colcon.colcon_core.verb:Building package 'HelloWorld' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld', 'merge_install': False, 'path': '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld', 'symlink_install': False, 'test_result_base': None}
+[0.639s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.641s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.642s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld' with build type 'ament_python'
+[0.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('HelloWorld', 'ament_prefix_path')
+[0.649s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/hook/ament_prefix_path.ps1'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/hook/ament_prefix_path.dsv'
+[0.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/hook/ament_prefix_path.sh'
+[0.655s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.655s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.156s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld'
+[1.156s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.156s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.618s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_scripts, alias, sdist, check, build_clib, install_data, saveopts, dist_info, upload_docs, bdist_rpm, upload, rotate, editable_wheel, bdist_egg, register, test, build_py, clean, build_ext, setopt, egg_info, bdist_wheel, install_headers, bdist_dumb, build, easy_install, install_lib, develop, bdist, symlink_data, build_scripts, install, install_egg_info
+[2.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/HelloWorld build --build-base /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build install --record /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/install.log --install-scripts $base/lib/HelloWorld --single-version-externally-managed install_data
+[3.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/HelloWorld build --build-base /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/build install --record /home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/build/HelloWorld/install.log --install-scripts $base/lib/HelloWorld --single-version-externally-managed install_data
+[3.890s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld' for CMake module files
+[3.891s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld' for CMake config files
+[3.892s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib'
+[3.893s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/bin'
+[3.893s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/pkgconfig/HelloWorld.pc'
+[3.894s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages'
+[3.894s] Level 1:colcon.colcon_core.shell:create_environment_hook('HelloWorld', 'pythonpath')
+[3.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/hook/pythonpath.ps1'
+[3.895s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/hook/pythonpath.dsv'
+[3.896s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/hook/pythonpath.sh'
+[3.897s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/bin'
+[3.898s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(HelloWorld)
+[3.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/package.ps1'
+[3.900s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/package.dsv'
+[3.902s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/package.sh'
+[3.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/package.bash'
+[3.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/HelloWorld/package.zsh'
+[3.906s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/share/colcon-core/packages/HelloWorld)
+[3.907s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.908s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.908s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.908s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.921s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.921s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.921s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.977s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.978s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/local_setup.ps1'
+[3.981s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/_local_setup_util_ps1.py'
+[3.984s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/setup.ps1'
+[3.987s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/local_setup.sh'
+[3.988s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/_local_setup_util_sh.py'
+[3.990s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/setup.sh'
+[3.993s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/local_setup.bash'
+[3.995s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/setup.bash'
+[3.997s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/local_setup.zsh'
+[3.999s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/setup.zsh'

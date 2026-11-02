@@ -1,0 +1,157 @@
+[0.000000] (-) TimerEvent: {}
+[0.002080] (HelloWorld) JobQueued: {'identifier': 'HelloWorld', 'dependencies': OrderedDict()}
+[0.004388] (HelloWorld) JobStarted: {'identifier': 'HelloWorld'}
+[0.099028] (-) TimerEvent: {}
+[0.200236] (-) TimerEvent: {}
+[0.301481] (-) TimerEvent: {}
+[0.403112] (-) TimerEvent: {}
+[0.504249] (-) TimerEvent: {}
+[0.605489] (-) TimerEvent: {}
+[0.706498] (-) TimerEvent: {}
+[0.807719] (-) TimerEvent: {}
+[0.909024] (-) TimerEvent: {}
+[1.010160] (-) TimerEvent: {}
+[1.111364] (-) TimerEvent: {}
+[1.212423] (-) TimerEvent: {}
+[1.313439] (-) TimerEvent: {}
+[1.414599] (-) TimerEvent: {}
+[1.515804] (-) TimerEvent: {}
+[1.616934] (-) TimerEvent: {}
+[1.718056] (-) TimerEvent: {}
+[1.819177] (-) TimerEvent: {}
+[1.920524] (-) TimerEvent: {}
+[2.021748] (-) TimerEvent: {}
+[2.122882] (-) TimerEvent: {}
+[2.224013] (-) TimerEvent: {}
+[2.325375] (-) TimerEvent: {}
+[2.426542] (-) TimerEvent: {}
+[2.528005] (-) TimerEvent: {}
+[2.629221] (-) TimerEvent: {}
+[2.730377] (-) TimerEvent: {}
+[2.831485] (-) TimerEvent: {}
+[2.932940] (-) TimerEvent: {}
+[3.034196] (-) TimerEvent: {}
+[3.135410] (-) TimerEvent: {}
+[3.236537] (-) TimerEvent: {}
+[3.337754] (-) TimerEvent: {}
+[3.438882] (-) TimerEvent: {}
+[3.539977] (-) TimerEvent: {}
+[3.641073] (-) TimerEvent: {}
+[3.742188] (-) TimerEvent: {}
+[3.843238] (-) TimerEvent: {}
+[3.944520] (-) TimerEvent: {}
+[4.045796] (-) TimerEvent: {}
+[4.147154] (-) TimerEvent: {}
+[4.248587] (-) TimerEvent: {}
+[4.349831] (-) TimerEvent: {}
+[4.451094] (-) TimerEvent: {}
+[4.552352] (-) TimerEvent: {}
+[4.653544] (-) TimerEvent: {}
+[4.754888] (-) TimerEvent: {}
+[4.856018] (-) TimerEvent: {}
+[4.957748] (-) TimerEvent: {}
+[5.058864] (-) TimerEvent: {}
+[5.160251] (-) TimerEvent: {}
+[5.261513] (-) TimerEvent: {}
+[5.362497] (-) TimerEvent: {}
+[5.463493] (-) TimerEvent: {}
+[5.564577] (-) TimerEvent: {}
+[5.665829] (-) TimerEvent: {}
+[5.766911] (-) TimerEvent: {}
+[5.868044] (-) TimerEvent: {}
+[5.969412] (-) TimerEvent: {}
+[6.070622] (-) TimerEvent: {}
+[6.171761] (-) TimerEvent: {}
+[6.272857] (-) TimerEvent: {}
+[6.373993] (-) TimerEvent: {}
+[6.475134] (-) TimerEvent: {}
+[6.576353] (-) TimerEvent: {}
+[6.677684] (-) TimerEvent: {}
+[6.778733] (-) TimerEvent: {}
+[6.879786] (-) TimerEvent: {}
+[6.980880] (-) TimerEvent: {}
+[7.082234] (-) TimerEvent: {}
+[7.183426] (-) TimerEvent: {}
+[7.284493] (-) TimerEvent: {}
+[7.385565] (-) TimerEvent: {}
+[7.486677] (-) TimerEvent: {}
+[7.587800] (-) TimerEvent: {}
+[7.689090] (-) TimerEvent: {}
+[7.743790] (HelloWorld) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/HelloWorld', 'build', '--build-base', '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build', 'install', '--record', '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/install.log', '--install-scripts', '$base/lib/HelloWorld', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'USER': 'nicolas', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'pt_BR.UTF-8', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '1783', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'XCURSOR_SIZE': '24', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nicolas', 'CHROME_DESKTOP': 'code.desktop', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'OLDPWD': '/home/nicolas/Downloads/PB_Ros2.ws/src', 'TERM_PROGRAM_VERSION': '1.135.0', 'DESKTOP_SESSION': 'plasma', 'ROS_PYTHON_VERSION': '3', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nicolas/.gtkrc:/home/nicolas/.config/gtkrc', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'KDE_SESSION_VERSION': '5', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'pt_BR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1629', 'LC_CTYPE': 'pt_BR.UTF-8', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2071', 'BUNDLED_DEBUGPY_PATH': '/home/nicolas/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'nicolas', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '8:10007', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'FC_FONTATIONS': '1', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nicolas/.gtkrc-2.0:/home/nicolas/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nicolas/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/nicolas-Vivobook-ASUSLaptop-M1502YA-M1502YA:@/tmp/.ICE-unix/2001,unix/nicolas-Vivobook-ASUSLaptop-M1502YA-M1502YA:/tmp/.ICE-unix/2001', 'INVOCATION_ID': 'f14a6297e7dc41d98dfdc15f6bb82d42', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'pt_BR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'Sweet-cursors', 'GDK_BACKEND': 'x11', 'ICEAUTHORITY': '/run/user/1000/iceauth_YTMmYY', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/nicolas/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-7dd8855dda90aeb3.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'PYTHONSTARTUP': '/home/nicolas/.config/Code/User/workspaceStorage/9d2d49199d3fc1c9e9e6553d2c02b56c/ms-python.python/pythonrc.py', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/tmp/xauth_FfKYEL', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-402a5460f1.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/ssh-TdSzFrN2onqm/agent.1696', 'AMENT_PREFIX_PATH': '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'XDG_VTNR': '2', 'PWD': '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld', 'XDG_CONFIG_DIRS': '/home/nicolas/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg', 'CLUTTER_IM_MODULE': 'ibus', 'XDG_DATA_DIRS': '/usr/share/plasma:/usr/share/gnome:/home/nicolas/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages:/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld/install/HelloWorld/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[7.789369] (-) TimerEvent: {}
+[7.890447] (-) TimerEvent: {}
+[7.991846] (-) TimerEvent: {}
+[8.093034] (-) TimerEvent: {}
+[8.194178] (-) TimerEvent: {}
+[8.295213] (-) TimerEvent: {}
+[8.396221] (-) TimerEvent: {}
+[8.497256] (-) TimerEvent: {}
+[8.598385] (-) TimerEvent: {}
+[8.699437] (-) TimerEvent: {}
+[8.800445] (-) TimerEvent: {}
+[8.901546] (-) TimerEvent: {}
+[9.002616] (-) TimerEvent: {}
+[9.103716] (-) TimerEvent: {}
+[9.205100] (-) TimerEvent: {}
+[9.306462] (-) TimerEvent: {}
+[9.407724] (-) TimerEvent: {}
+[9.508343] (-) TimerEvent: {}
+[9.609649] (-) TimerEvent: {}
+[9.710806] (-) TimerEvent: {}
+[9.811998] (-) TimerEvent: {}
+[9.913172] (-) TimerEvent: {}
+[10.014504] (-) TimerEvent: {}
+[10.116126] (-) TimerEvent: {}
+[10.217446] (-) TimerEvent: {}
+[10.247504] (HelloWorld) StdoutLine: {'line': b'running egg_info\n'}
+[10.317780] (-) TimerEvent: {}
+[10.418890] (-) TimerEvent: {}
+[10.441933] (HelloWorld) StdoutLine: {'line': b'writing ../../build/HelloWorld/HelloWorld.egg-info/PKG-INFO\n'}
+[10.445796] (HelloWorld) StdoutLine: {'line': b'writing dependency_links to ../../build/HelloWorld/HelloWorld.egg-info/dependency_links.txt\n'}
+[10.447994] (HelloWorld) StdoutLine: {'line': b'writing entry points to ../../build/HelloWorld/HelloWorld.egg-info/entry_points.txt\n'}
+[10.449856] (HelloWorld) StdoutLine: {'line': b'writing requirements to ../../build/HelloWorld/HelloWorld.egg-info/requires.txt\n'}
+[10.451787] (HelloWorld) StdoutLine: {'line': b'writing top-level names to ../../build/HelloWorld/HelloWorld.egg-info/top_level.txt\n'}
+[10.519185] (-) TimerEvent: {}
+[10.620248] (-) TimerEvent: {}
+[10.721426] (-) TimerEvent: {}
+[10.822510] (-) TimerEvent: {}
+[10.851589] (HelloWorld) StdoutLine: {'line': b"reading manifest file '../../build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'\n"}
+[10.860451] (HelloWorld) StdoutLine: {'line': b"writing manifest file '../../build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'\n"}
+[10.863419] (HelloWorld) StdoutLine: {'line': b'running build\n'}
+[10.865382] (HelloWorld) StdoutLine: {'line': b'running build_py\n'}
+[10.867942] (HelloWorld) StdoutLine: {'line': b'running install\n'}
+[10.922861] (-) TimerEvent: {}
+[10.925075] (HelloWorld) StdoutLine: {'line': b'running install_lib\n'}
+[11.023223] (-) TimerEvent: {}
+[11.124887] (-) TimerEvent: {}
+[11.129207] (HelloWorld) StdoutLine: {'line': b'running install_data\n'}
+[11.132796] (HelloWorld) StdoutLine: {'line': b'copying launch/hello.launch.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/HelloWorld/launch\n'}
+[11.134895] (HelloWorld) StdoutLine: {'line': b'running install_egg_info\n'}
+[11.225256] (-) TimerEvent: {}
+[11.326479] (-) TimerEvent: {}
+[11.345479] (HelloWorld) StdoutLine: {'line': b"removing '/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[11.349612] (HelloWorld) StdoutLine: {'line': b'Copying ../../build/HelloWorld/HelloWorld.egg-info to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld-0.0.0-py3.12.egg-info\n'}
+[11.362130] (HelloWorld) StdoutLine: {'line': b'running install_scripts\n'}
+[11.426785] (-) TimerEvent: {}
+[11.528005] (-) TimerEvent: {}
+[11.629196] (-) TimerEvent: {}
+[11.730389] (-) TimerEvent: {}
+[11.831486] (-) TimerEvent: {}
+[11.932541] (-) TimerEvent: {}
+[12.033600] (-) TimerEvent: {}
+[12.134669] (-) TimerEvent: {}
+[12.235882] (-) TimerEvent: {}
+[12.337159] (-) TimerEvent: {}
+[12.438355] (-) TimerEvent: {}
+[12.539858] (-) TimerEvent: {}
+[12.641552] (-) TimerEvent: {}
+[12.740903] (HelloWorld) StdoutLine: {'line': b'Installing exec_pub script to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/HelloWorld\n'}
+[12.742126] (-) TimerEvent: {}
+[12.743871] (HelloWorld) StdoutLine: {'line': b'Installing exec_sub script to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/HelloWorld\n'}
+[12.747897] (HelloWorld) StdoutLine: {'line': b"writing list of installed files to '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/install.log'\n"}
+[12.842576] (-) TimerEvent: {}
+[12.943703] (-) TimerEvent: {}
+[12.996976] (HelloWorld) CommandEnded: {'returncode': 0}
+[13.051446] (-) TimerEvent: {}
+[13.102715] (HelloWorld) JobEnded: {'identifier': 'HelloWorld', 'rc': 0}
+[13.107537] (-) EventReactorShutdown: {}

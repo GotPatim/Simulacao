@@ -1,0 +1,38 @@
+[2.073s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/HelloWorld build --build-base /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build install --record /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/install.log --install-scripts $base/lib/HelloWorld --single-version-externally-managed install_data
+[2.784s] running egg_info
+[2.785s] creating ../../build/HelloWorld/HelloWorld.egg-info
+[2.832s] writing ../../build/HelloWorld/HelloWorld.egg-info/PKG-INFO
+[2.833s] writing dependency_links to ../../build/HelloWorld/HelloWorld.egg-info/dependency_links.txt
+[2.834s] writing requirements to ../../build/HelloWorld/HelloWorld.egg-info/requires.txt
+[2.834s] writing top-level names to ../../build/HelloWorld/HelloWorld.egg-info/top_level.txt
+[2.834s] writing manifest file '../../build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'
+[2.934s] reading manifest file '../../build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'
+[2.935s] writing manifest file '../../build/HelloWorld/HelloWorld.egg-info/SOURCES.txt'
+[2.936s] running build
+[2.936s] running build_py
+[2.936s] creating /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build
+[2.936s] creating /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib
+[2.937s] creating /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld
+[2.937s] copying HelloWorld/__init__.py -> /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld
+[2.937s] copying HelloWorld/subscriber.py -> /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld
+[2.937s] copying HelloWorld/publisher.py -> /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld
+[2.938s] running install
+[2.953s] running install_lib
+[3.003s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+[3.004s] copying /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld/__init__.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+[3.004s] copying /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld/subscriber.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+[3.004s] copying /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build/lib/HelloWorld/publisher.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld
+[3.005s] byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld/__init__.py to __init__.cpython-312.pyc
+[3.006s] byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld/subscriber.py to subscriber.cpython-312.pyc
+[3.007s] byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld/publisher.py to publisher.cpython-312.pyc
+[3.008s] running install_data
+[3.009s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/ament_index
+[3.009s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/ament_index/resource_index
+[3.009s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/ament_index/resource_index/packages
+[3.010s] copying resource/HelloWorld -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/ament_index/resource_index/packages
+[3.010s] copying package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/HelloWorld
+[3.010s] running install_egg_info
+[3.063s] Copying ../../build/HelloWorld/HelloWorld.egg-info to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld-0.0.0-py3.12.egg-info
+[3.065s] running install_scripts
+[3.397s] writing list of installed files to '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/install.log'
+[3.454s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/src/HelloWorld' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/HelloWorld build --build-base /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build install --record /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/install.log --install-scripts $base/lib/HelloWorld --single-version-externally-managed install_data

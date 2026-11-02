@@ -1,0 +1,24 @@
+[3.148s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data
+[3.972s] running develop
+[4.500s] running egg_info
+[4.500s] creating Movement.egg-info
+[4.550s] writing Movement.egg-info/PKG-INFO
+[4.551s] writing dependency_links to Movement.egg-info/dependency_links.txt
+[4.551s] writing entry points to Movement.egg-info/entry_points.txt
+[4.551s] writing requirements to Movement.egg-info/requires.txt
+[4.552s] writing top-level names to Movement.egg-info/top_level.txt
+[4.552s] writing manifest file 'Movement.egg-info/SOURCES.txt'
+[4.653s] reading manifest file 'Movement.egg-info/SOURCES.txt'
+[4.655s] writing manifest file 'Movement.egg-info/SOURCES.txt'
+[4.707s] running build_ext
+[4.708s] Creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement.egg-link (link to .)
+[4.709s] Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[4.710s] 
+[4.711s] Installed /home/nicolas/Downloads/PB_Ros2.ws/build/Movement
+[4.711s] running symlink_data
+[4.711s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/ament_index
+[4.712s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/ament_index/resource_index
+[4.712s] creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/ament_index/resource_index/packages
+[4.712s] symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/resource/Movement -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/ament_index/resource_index/packages
+[4.712s] symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/Movement
+[4.774s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data

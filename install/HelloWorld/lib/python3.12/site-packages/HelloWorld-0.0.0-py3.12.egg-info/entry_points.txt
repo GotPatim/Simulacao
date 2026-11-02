@@ -1,0 +1,3 @@
+[console_scripts]
+exec_pub = HelloWorld.publisher:main
+exec_sub = HelloWorld.subscriber:main

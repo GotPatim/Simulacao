@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing Movement.egg-info/PKG-INFO
+writing dependency_links to Movement.egg-info/dependency_links.txt
+writing entry points to Movement.egg-info/entry_points.txt
+writing requirements to Movement.egg-info/requires.txt
+writing top-level names to Movement.egg-info/top_level.txt
+reading manifest file 'Movement.egg-info/SOURCES.txt'
+writing manifest file 'Movement.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement.egg-link (link to .)
+Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+
+Installed /home/nicolas/Downloads/PB_Ros2.ws/build/Movement
+running symlink_data
+symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/resource/Movement -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/ament_index/resource_index/packages
+symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/Movement
