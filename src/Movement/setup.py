@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'Movement'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*'))),
     ],
     install_requires=[
                     'setuptools',
@@ -31,7 +34,8 @@ setup(
     entry_points={
         'console_scripts': [
             'walk = Movement.walk:main',
-#            'walk = Movement.odometria:main',
+            'esp = Movement.fake_esp:main',
+            'hwinterface = Movement.hwinterface:main',
         ],
     },
 )

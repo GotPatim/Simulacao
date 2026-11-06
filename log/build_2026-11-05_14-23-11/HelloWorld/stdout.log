@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing HelloWorld.egg-info/PKG-INFO
+writing dependency_links to HelloWorld.egg-info/dependency_links.txt
+writing entry points to HelloWorld.egg-info/entry_points.txt
+writing requirements to HelloWorld.egg-info/requires.txt
+writing top-level names to HelloWorld.egg-info/top_level.txt
+reading manifest file 'HelloWorld.egg-info/SOURCES.txt'
+writing manifest file 'HelloWorld.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld.egg-link (link to .)
+Installing exec_pub script to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/HelloWorld
+Installing exec_sub script to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/HelloWorld
+
+Installed /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld
+running symlink_data
+symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/resource/HelloWorld -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/ament_index/resource_index/packages
+symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/HelloWorld
+symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/launch/hello.launch.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/HelloWorld/launch

@@ -1,9 +1,14 @@
 colcon build --packages-select robot_sim
 source install/setup.bash
 ros2 launch robot_sim sim.launch.py
+
+#cria as portas seriais q o HW e a esp comunicam
+socat -d -d pty,raw,echo=0,link=/tmp/ttyESP pty,raw,echo=0,link=/tmp/ttyHW  
+
+
 colcon build --symlink-install --packages-select Movement
 source install/setup.bash
-ros2 run Movement walk --ros-args -p use_sim_time:=true
+ros2 launch Movement run_all.launch.py use_sim_time:=true
 
 
 chmod a+wr /dev/tty

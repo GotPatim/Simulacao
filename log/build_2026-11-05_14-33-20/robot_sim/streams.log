@@ -1,0 +1,33 @@
+[3.466s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim -DCMAKE_INSTALL_PREFIX=/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim
+[3.629s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.347s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.148s] -- Configuring done (2.6s)
+[6.183s] -- Generating done (0.0s)
+[6.200s] -- Build files have been written to: /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim
+[6.231s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim -DCMAKE_INSTALL_PREFIX=/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim
+[6.237s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16
+[6.601s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16
+[6.699s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim
+[6.777s] -- Install configuration: ""
+[6.781s] -- Execute custom install script
+[6.787s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/esp_robot_world.sdf
+[6.790s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/robot_world.sdf
+[6.790s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/bridge.yaml
+[6.790s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/esp_bridge.yaml
+[6.792s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/launch/sim.launch.py
+[6.797s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/package_run_dependencies/robot_sim
+[6.797s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/parent_prefix_path/robot_sim
+[6.798s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/ament_prefix_path.sh
+[6.799s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/ament_prefix_path.dsv
+[6.804s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/path.sh
+[6.807s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/environment/path.dsv
+[6.809s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.bash
+[6.810s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.sh
+[6.814s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.zsh
+[6.818s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/local_setup.dsv
+[6.818s] -- Symlinking: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.dsv
+[6.904s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/packages/robot_sim
+[6.908s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/cmake/robot_simConfig.cmake
+[6.909s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/cmake/robot_simConfig-version.cmake
+[6.916s] -- Up-to-date symlink: /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.xml
+[6.930s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim

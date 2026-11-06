@@ -1,0 +1,21 @@
+[8.821s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build --no-deps symlink_data --force
+[10.985s] running develop
+[12.379s] running egg_info
+[12.511s] writing HelloWorld.egg-info/PKG-INFO
+[12.513s] writing dependency_links to HelloWorld.egg-info/dependency_links.txt
+[12.515s] writing entry points to HelloWorld.egg-info/entry_points.txt
+[12.516s] writing requirements to HelloWorld.egg-info/requires.txt
+[12.517s] writing top-level names to HelloWorld.egg-info/top_level.txt
+[12.782s] reading manifest file 'HelloWorld.egg-info/SOURCES.txt'
+[12.788s] writing manifest file 'HelloWorld.egg-info/SOURCES.txt'
+[12.923s] running build_ext
+[12.923s] Creating /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages/HelloWorld.egg-link (link to .)
+[12.927s] Installing exec_pub script to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/HelloWorld
+[12.930s] Installing exec_sub script to /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/HelloWorld
+[12.930s] 
+[12.931s] Installed /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld
+[12.932s] running symlink_data
+[12.933s] symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/resource/HelloWorld -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/ament_index/resource_index/packages
+[12.934s] symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/HelloWorld
+[12.935s] symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/launch/hello.launch.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/share/HelloWorld/launch
+[13.160s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/HelloWorld/build --no-deps symlink_data --force

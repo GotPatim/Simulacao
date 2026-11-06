@@ -1,0 +1,31 @@
+running develop
+Removing /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement.egg-link (link to .)
+running egg_info
+writing ../../build/Movement/Movement.egg-info/PKG-INFO
+writing dependency_links to ../../build/Movement/Movement.egg-info/dependency_links.txt
+writing entry points to ../../build/Movement/Movement.egg-info/entry_points.txt
+writing requirements to ../../build/Movement/Movement.egg-info/requires.txt
+writing top-level names to ../../build/Movement/Movement.egg-info/top_level.txt
+reading manifest file '../../build/Movement/Movement.egg-info/SOURCES.txt'
+writing manifest file '../../build/Movement/Movement.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+copying /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement/robot_constants.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement
+copying /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement/__init__.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement
+copying /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement/walk.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement
+copying /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement/fake_esp.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement/robot_constants.py to robot_constants.cpython-312.pyc
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement/walk.py to walk.cpython-312.pyc
+byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement/fake_esp.py to fake_esp.cpython-312.pyc
+running install_data
+copying resource/Movement -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/ament_index/resource_index/packages
+copying package.xml -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/Movement
+running install_egg_info
+Copying ../../build/Movement/Movement.egg-info to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement-0.0.0-py3.12.egg-info
+running install_scripts
+Installing esp script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+writing list of installed files to '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/install.log'

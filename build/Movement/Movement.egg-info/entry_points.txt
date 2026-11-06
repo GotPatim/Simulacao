@@ -1,2 +1,4 @@
 [console_scripts]
+esp = Movement.fake_esp:main
+hwinterface = Movement.hwinterface:main
 walk = Movement.walk:main

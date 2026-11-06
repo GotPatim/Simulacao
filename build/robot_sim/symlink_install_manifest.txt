@@ -1,5 +1,7 @@
+/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/esp_robot_world.sdf
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/robot_world.sdf
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/bridge.yaml
+/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/esp_bridge.yaml
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/launch/sim.launch.py
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/package_run_dependencies/robot_sim
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/ament_index/resource_index/parent_prefix_path/robot_sim

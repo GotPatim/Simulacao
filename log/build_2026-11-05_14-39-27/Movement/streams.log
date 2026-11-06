@@ -1,0 +1,19 @@
+[9.301s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data
+[11.993s] running develop
+[13.710s] running egg_info
+[13.863s] writing Movement.egg-info/PKG-INFO
+[13.865s] writing dependency_links to Movement.egg-info/dependency_links.txt
+[13.865s] writing entry points to Movement.egg-info/entry_points.txt
+[13.866s] writing requirements to Movement.egg-info/requires.txt
+[13.867s] writing top-level names to Movement.egg-info/top_level.txt
+[14.191s] reading manifest file 'Movement.egg-info/SOURCES.txt'
+[14.196s] writing manifest file 'Movement.egg-info/SOURCES.txt'
+[14.368s] running build_ext
+[14.369s] Creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement.egg-link (link to .)
+[14.373s] Installing esp script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[14.375s] Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[14.377s] 
+[14.377s] Installed /home/nicolas/Downloads/PB_Ros2.ws/build/Movement
+[14.377s] running symlink_data
+[14.378s] symbolically linking /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/launch/run_all.launch.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/share/Movement/launch
+[14.608s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data

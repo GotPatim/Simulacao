@@ -1,0 +1,18 @@
+[8.654s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data
+[11.205s] running develop
+[12.891s] running egg_info
+[13.054s] writing Movement.egg-info/PKG-INFO
+[13.054s] writing dependency_links to Movement.egg-info/dependency_links.txt
+[13.054s] writing entry points to Movement.egg-info/entry_points.txt
+[13.056s] writing requirements to Movement.egg-info/requires.txt
+[13.058s] writing top-level names to Movement.egg-info/top_level.txt
+[13.394s] reading manifest file 'Movement.egg-info/SOURCES.txt'
+[13.398s] writing manifest file 'Movement.egg-info/SOURCES.txt'
+[13.573s] running build_ext
+[13.573s] Creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement.egg-link (link to .)
+[13.577s] Installing esp script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[13.580s] Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[13.580s] 
+[13.580s] Installed /home/nicolas/Downloads/PB_Ros2.ws/build/Movement
+[13.580s] running symlink_data
+[13.813s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data
