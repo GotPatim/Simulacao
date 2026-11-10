@@ -15,7 +15,8 @@ def generate_launch_description():
             os.path.join(ros_gz_sim, 'launch', 'gz_sim.launch.py')),
         
         # World where its response goes to the HWInterface
-        launch_arguments={'gz_args': '-r ' + os.path.join(pkg, 'worlds', 'esp_robot_world.sdf')}.items(),
+        # launch_arguments={'gz_args': '-r ' + os.path.join(pkg, 'worlds', 'esp_robot_world.sdf')}.items(),
+        launch_arguments={'gz_args': '-r ' + os.path.join(pkg, 'worlds', 'esp_ideal_world.sdf')}.items(),
         
         # Ideal World
         # launch_arguments={'gz_args': '-r ' + os.path.join(pkg, 'worlds', 'robot_world.sdf')}.items(),

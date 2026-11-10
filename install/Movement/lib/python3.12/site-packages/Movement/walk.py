@@ -6,6 +6,7 @@ from rclpy.node import Node
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 from Movement.robot_constants import *
+import time
 
 
 
@@ -21,7 +22,14 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         #Variaveis pra simplificar as intruções
         LEFT = 1
         RIGHT = -1 
-        self.instructions = [("FOWARD", 2.0), ("TURN", LEFT), ("FOWARD", 1.0), ("TURN", LEFT), ("FOWARD", 2.0), ("TURN", LEFT), ("FOWARD", 1.0), ("TURN", LEFT)] # Percurso q o robo precisa seguir
+        self.instructions = [("FOWARD", 13.0), 
+                             ("TURN", LEFT), 
+                             ("FOWARD", 9.0), 
+                             ("TURN", LEFT), 
+                             ("FOWARD", 13.0), 
+                             ("TURN", LEFT), 
+                             ("FOWARD", 9.0), 
+                             ("TURN", LEFT)] # Percurso q o robo precisa seguir
         self.instructions_step = 0
         self.setupVariables()
 
@@ -31,8 +39,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.first_run = True
         self.starting_turn = False
         self.starting_walk = True
-        self.rate = self.create_rate(50) #50Hz
-        self.last_time = 0
+        self.last_time = None
 
         #   Current Position
         self.current_x = 0
@@ -112,6 +119,11 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         cmd.linear.x = ROBOT_CENTER_SPEED 
     
         current_time = self.get_clock().now().nanoseconds / 1e9
+
+        if self.last_time is None:
+            self.last_time = current_time
+            return  
+        
         dt = (current_time - self.last_time)
         
         dx = self.current_x - self.start_x 
@@ -127,6 +139,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
             self.instructions_step += 1
             self.starting_walk = True
             self.starting_turn = True
+            time.sleep(0.2)
             return
 
         self.last_time = current_time
@@ -171,7 +184,8 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.current_angular_speed_z = direction * (ROBOT_CENTER_SPEED + ROBOT_CENTER_SPEED) / WHEEL_SEPARATION # com essa velocidade angular ele gira no lugar, supostamente
 
         if(self.starting_turn):
-            self.target_yaw += rotation # adiciona à angulação atual a curva de 90 graus
+            self.target_yaw += rotation 
+            self.normalize_angle(self.target_yaw)
             self.target_yaw = math.atan2(math.sin(self.target_yaw), math.cos(self.target_yaw))
             self.starting_turn = False
 
@@ -192,17 +206,24 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
         error = math.atan2(math.sin(self.target_yaw - self.current_yaw), # calcula o erro da rotação(msm jeito q calcula o da velocidade)
                            math.cos(self.target_yaw - self.current_yaw))
-        if abs(error) > 0.01: # keeps turning until it reaches the target angle
-            cmd.angular.z = self.current_angular_speed_z
+        if abs(error) > 0.02: # keeps turning until it reaches the target angle
             self.cmd_pub.publish(cmd)
         else: # para de gira
+            cmd.angular.z = 0.0
+            self.cmd_pub.publish(cmd)
+
+
             self.last_error = 0.0
             self.integral_error = 0.0
             self.instructions_step += 1
             self.starting_walk = True
             self.starting_turn = True
-            cmd.angular.z = 0.0
-            self.cmd_pub.publish(cmd)
+            time.sleep(0.2)
+    
+    def normalize_angle(self, angle): # Limits the angle between -180 and 180
+            while angle > math.pi: angle -= 2.0 * math.pi
+            while angle < -math.pi: angle += 2.0 * math.pi
+            return angle
 
 
 def main(args=None):

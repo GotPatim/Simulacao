@@ -69,10 +69,8 @@ class HWInterface(Node): #Refazer
 
     def receiveData(self):
 
-        self.get_logger().info(f"BATATAAA")
         if (self.connection and self.connection.in_waiting > 0):
             data = self.connection.read(self.connection.in_waiting).decode("utf-8")
-            self.get_logger().info(f"Read data: {data}")
             
         #    if data is None:
         #        return
@@ -162,10 +160,7 @@ class HWInterface(Node): #Refazer
         command = f"V,{wl:.3f},{wr:.3f}\n"
         try:
             self.connection.write(command.encode('utf-8'))
-            print(f"Comando enviado: {command.strip()}")
-
         except serial.SerialException as e:
-            print(f"Erro ao enviar comando: {e}")
             self.connected = False
 
     

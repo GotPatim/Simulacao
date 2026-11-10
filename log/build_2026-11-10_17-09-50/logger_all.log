@@ -1,0 +1,162 @@
+[0.781s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'robot_sim']
+[0.781s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['robot_sim'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x71375bb85d60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71375cbfa240>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71375cbfa240>>)
+[1.048s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.049s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.051s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.051s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/nicolas/Downloads/PB_Ros2.ws'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.209s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.210s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.213s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.214s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.216s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.217s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.218s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.218s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.219s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.220s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.220s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.220s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.220s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extensions ['ignore', 'ignore_ament_install']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extension 'ignore'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extension 'ignore_ament_install'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extensions ['colcon_pkg']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extension 'colcon_pkg'
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extensions ['colcon_meta']
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extension 'colcon_meta'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extensions ['ros']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/HelloWorld) by extension 'ros'
+[1.241s] DEBUG:colcon.colcon_core.package_identification:Package 'src/HelloWorld' with type 'ros.ament_python' and name 'HelloWorld'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extensions ['ignore', 'ignore_ament_install']
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extension 'ignore'
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extension 'ignore_ament_install'
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extensions ['colcon_pkg']
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extension 'colcon_pkg'
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extensions ['colcon_meta']
+[1.242s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extension 'colcon_meta'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extensions ['ros']
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/Movement) by extension 'ros'
+[1.249s] DEBUG:colcon.colcon_core.package_identification:Package 'src/Movement' with type 'ros.ament_python' and name 'Movement'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extensions ['ignore', 'ignore_ament_install']
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extension 'ignore'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extension 'ignore_ament_install'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extensions ['colcon_pkg']
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extension 'colcon_pkg'
+[1.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extensions ['colcon_meta']
+[1.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extension 'colcon_meta'
+[1.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extensions ['ros']
+[1.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_sim) by extension 'ros'
+[1.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_sim' with type 'ros.ament_cmake' and name 'robot_sim'
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.368s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'HelloWorld' in 'src/HelloWorld'
+[1.369s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'Movement' in 'src/Movement'
+[1.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.386s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/nicolas/Downloads/PB_Ros2.ws/install
+[1.391s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/nicolas/install
+[1.405s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 319 installed packages in /opt/ros/jazzy
+[1.410s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.712s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'cmake_args' from command line to 'None'
+[1.712s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'cmake_target' from command line to 'None'
+[1.713s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.713s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[1.713s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'cmake_clean_first' from command line to 'False'
+[1.713s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'cmake_force_configure' from command line to 'False'
+[1.713s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'ament_cmake_args' from command line to 'None'
+[1.714s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[1.714s] Level 5:colcon.colcon_core.verb:set package 'robot_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.714s] DEBUG:colcon.colcon_core.verb:Building package 'robot_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim', 'merge_install': False, 'path': '/home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim', 'symlink_install': False, 'test_result_base': None}
+[1.715s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.718s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.720s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim' with build type 'ament_cmake'
+[1.721s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nicolas/Downloads/PB_Ros2.ws/src/robot_sim'
+[1.737s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.737s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.737s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.799s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/home/nicolas/install/Movement:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16
+[2.181s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/home/nicolas/install/Movement:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim -- -j16 -l16
+[2.261s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/home/nicolas/install/Movement:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim
+[2.433s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_sim)
+[2.435s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/home/nicolas/install/Movement:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim
+[2.453s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim' for CMake module files
+[2.455s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim' for CMake config files
+[2.457s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_sim', 'cmake_prefix_path')
+[2.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/hook/cmake_prefix_path.ps1'
+[2.461s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/hook/cmake_prefix_path.dsv'
+[2.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/hook/cmake_prefix_path.sh'
+[2.468s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/bin'
+[2.469s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/lib/pkgconfig/robot_sim.pc'
+[2.470s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/lib/python3.12/site-packages'
+[2.473s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/bin'
+[2.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.ps1'
+[2.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.dsv'
+[2.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.sh'
+[2.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.bash'
+[2.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.zsh'
+[2.493s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/colcon-core/packages/robot_sim)
+[2.496s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_sim)
+[2.496s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim' for CMake module files
+[2.499s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim' for CMake config files
+[2.502s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_sim', 'cmake_prefix_path')
+[2.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/hook/cmake_prefix_path.ps1'
+[2.504s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/hook/cmake_prefix_path.dsv'
+[2.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/hook/cmake_prefix_path.sh'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/bin'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/lib/pkgconfig/robot_sim.pc'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/lib/python3.12/site-packages'
+[2.512s] Level 1:colcon.colcon_core.environment:checking '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/bin'
+[2.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.ps1'
+[2.517s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.dsv'
+[2.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.sh'
+[2.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.bash'
+[2.525s] INFO:colcon.colcon_core.shell:Creating package script '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/package.zsh'
+[2.527s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/colcon-core/packages/robot_sim)
+[2.530s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.532s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.532s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.532s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.570s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.570s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.570s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.700s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.702s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/install/local_setup.ps1'
+[2.708s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nicolas/Downloads/PB_Ros2.ws/install/_local_setup_util_ps1.py'
+[2.713s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/install/setup.ps1'
+[2.720s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/install/local_setup.sh'
+[2.724s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/nicolas/Downloads/PB_Ros2.ws/install/_local_setup_util_sh.py'
+[2.726s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/install/setup.sh'
+[2.731s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/install/local_setup.bash'
+[2.736s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/install/setup.bash'
+[2.741s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/nicolas/Downloads/PB_Ros2.ws/install/local_setup.zsh'
+[2.745s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/nicolas/Downloads/PB_Ros2.ws/install/setup.zsh'
