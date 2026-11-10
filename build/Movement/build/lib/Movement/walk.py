@@ -53,11 +53,11 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.current_angular_speed_z = 0 # rad/s
 
         # PID
-        self.kp = 0
-        self.ki = 0
-        self.kd = 0
-        self.integral_error = 0
-        self.max_integral = 0
+        self.kp = 2.0
+        self.ki = 0.15
+        self.kd = 0.1
+        self.integral_error = 0.0
+        self.max_integral = 0.5
         self.last_error = 0.0
 
     def odomCallback(self, msg): # só atribui os valores as variaveis certas
@@ -113,7 +113,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
     
         current_time = self.get_clock().now().nanoseconds / 1e9
         dt = (current_time - self.last_time)
-
+        
         dx = self.current_x - self.start_x 
         dy = self.current_y - self.start_y
 
@@ -122,6 +122,8 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         #self.get_logger().info(f"dx={dx:.3f} x={self.current_x:.3f} y={self.current_y:.2f}  dist={self.dist_projected:.2f}  cos={math.cos(self.target_yaw):.2f}")
         if(self.dist_projected >= target_distance):
             self.dist_projected = 0
+            self.last_error = 0.0
+            self.integral_error = 0.0
             self.instructions_step += 1
             self.starting_walk = True
             self.starting_turn = True
@@ -141,14 +143,15 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
     def angularPID(self, target_angle, dt):
         #PID
-        error = target_angle - self.current_yaw
-        
+        error = math.atan2(math.sin(target_angle - self.current_yaw),
+                           math.cos(target_angle - self.current_yaw))
         # P
         P = self.kp * error
 
         # I
-        self.integral_error += error * dt
-
+        if(dt > 0):
+            self.integral_error += error * dt
+        
         self.integral_error = max(min(self.integral_error, self.max_integral), -self.max_integral)
         I = self.ki * self.integral_error
 
@@ -169,15 +172,35 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
         if(self.starting_turn):
             self.target_yaw += rotation # adiciona à angulação atual a curva de 90 graus
+            self.target_yaw = math.atan2(math.sin(self.target_yaw), math.cos(self.target_yaw))
             self.starting_turn = False
-    
+
+            self.last_error = 0.0
+            self.integral_error = 0.0
+            self.last_time = self.get_clock().now().nanoseconds / 1e9
+
+        current_time = self.get_clock().now().nanoseconds / 1e9
+        dt = (current_time - self.last_time)
+        if dt <= 0:
+            dt = 0.02 # Fallback de segurança para 50Hz
+        self.last_time = current_time
+        
+        pid_output = self.angularPID(self.target_yaw, dt)
+
+        max_turn_speed = 1.5 # rad/s
+        cmd.angular.z = max(min(pid_output, max_turn_speed), -max_turn_speed)
+
         error = math.atan2(math.sin(self.target_yaw - self.current_yaw), # calcula o erro da rotação(msm jeito q calcula o da velocidade)
                            math.cos(self.target_yaw - self.current_yaw))
-        if abs(error) > 0.02: # keeps turning until it reaches the target angle
+        if abs(error) > 0.01: # keeps turning until it reaches the target angle
             cmd.angular.z = self.current_angular_speed_z
             self.cmd_pub.publish(cmd)
         else: # para de gira
+            self.last_error = 0.0
+            self.integral_error = 0.0
             self.instructions_step += 1
+            self.starting_walk = True
+            self.starting_turn = True
             cmd.angular.z = 0.0
             self.cmd_pub.publish(cmd)
 

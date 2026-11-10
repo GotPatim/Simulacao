@@ -6,3 +6,4 @@ WHEEL_SEPARATION = 0.20
 # ROBOT_WIDTH = 0.25 # distancia entre as rodas
 ROBOT_LENGTH = 0.40
 ROBOT_CENTER_SPEED = 0.2 
+MAX_TURN_SPEED = 1.5 # rad/s
