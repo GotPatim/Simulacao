@@ -1,0 +1,19 @@
+[3.616s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data
+[4.577s] running develop
+[5.223s] running egg_info
+[5.283s] writing Movement.egg-info/PKG-INFO
+[5.284s] writing dependency_links to Movement.egg-info/dependency_links.txt
+[5.285s] writing entry points to Movement.egg-info/entry_points.txt
+[5.286s] writing requirements to Movement.egg-info/requires.txt
+[5.286s] writing top-level names to Movement.egg-info/top_level.txt
+[5.425s] reading manifest file 'Movement.egg-info/SOURCES.txt'
+[5.428s] writing manifest file 'Movement.egg-info/SOURCES.txt'
+[5.491s] running build_ext
+[5.492s] Creating /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement.egg-link (link to .)
+[5.494s] Installing esp script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[5.494s] Installing hwinterface script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[5.495s] Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[5.496s] 
+[5.496s] Installed /home/nicolas/Downloads/PB_Ros2.ws/build/Movement
+[5.496s] running symlink_data
+[5.571s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build --no-deps symlink_data

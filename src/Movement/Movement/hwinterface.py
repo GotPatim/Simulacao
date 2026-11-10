@@ -7,6 +7,7 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist, Quaternion, TransformStamped
 from Movement.robot_constants import *
 import serial
+import time
 
 
 SERIAL_PORT = '/tmp/ttyHW'
@@ -26,9 +27,9 @@ class HWInterface(Node): #Refazer
         try:
             self.setupVariables()
             self.connection = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
-            self.waitFor(2)  # Aguardar inicialização por 2 segundos
+            time.sleep(2)
             self.connected = True
-            print("Interface de Hardware conectada ao ESP32.")
+            print("Interface de Hardware conectada a ESP32.")
 
             self.cmd_sub =  self.create_subscription(Twist,"/cmd_vel", self.sendSpeed, 10)
             self.odom_pub =  self.create_publisher(Odometry,"/odom", 50)
@@ -41,18 +42,6 @@ class HWInterface(Node): #Refazer
             print(f"Erro Crítico: Não foi possível conectar ao hardware. {e}")
             self.connected = False
             return
-
-
-    def waitFor(self, seconds):
-        now = self.get_clock().now()
-        if self.wait_start is None:
-            self.wait_start = now
-
-        while ((now - self.wait_start).nanoseconds / 1e9 < seconds):
-            now = self.get_clock().now()
-            if (now - self.wait_start).nanoseconds / 1e9 >= seconds:
-                self.wait_start = None      # reset so it works again next time
-        return True
 
     def setupVariables(self):
         #   Control
@@ -70,6 +59,9 @@ class HWInterface(Node): #Refazer
         self.current_linear_speed_y = 0
         self.current_angular_speed_z = 0 # rad/s
 
+        self.vel_left = 0.0
+        self.vel_right = 0.0
+
     def normalize_angle(self, angle): # Limits the angle between -180 and 180
         while angle > math.pi: angle -= 2.0 * math.pi
         while angle < -math.pi: angle += 2.0 * math.pi
@@ -81,21 +73,25 @@ class HWInterface(Node): #Refazer
         if (self.connection and self.connection.in_waiting > 0):
             data = self.connection.read(self.connection.in_waiting).decode("utf-8")
             self.get_logger().info(f"Read data: {data}")
+            
+        #    if data is None:
+        #        return
+
 
             self.buffer += data # ---> b'E,120,118,1.234,1.100\nE,125,12'
 
-            # Utiliza somente a ultima linha pra simplificar o processo 
-            lines = self.buffer.split("\n")
-            line = lines[-2]
-            self.buffer = lines[-1] # guarda a linha incompleta pra que proximo ciclo não fique desincronizado
-            line = line.strip() # fica só os numeros eas virgulas ------> E,120,118,1.234,1.100
-            info = line.split(",")
-            
-            vel_left = info[3]
-            vel_right = info[4]
+            #Se tiver uma linha valida no buffer
+            if( "\n" in self.buffer):
+                # Utiliza somente a ultima linha pra simplificar o processo 
+                lines = self.buffer.split("\n")
+                line = lines[-2]
 
-            return vel_left, vel_right
-
+                self.buffer = lines[-1] # guarda a linha incompleta pra que proximo ciclo não fique desincronizado
+                line = line.strip() # fica só os numeros eas virgulas ------> E,120,118,1.234,1.100
+                info = line.split(",")
+                
+                self.vel_left = float(info[3])
+                self.vel_right = float(info[4])
 
 
     def calcOdom(self): 
@@ -112,15 +108,15 @@ class HWInterface(Node): #Refazer
         self.get_logger().info(f"ABAXACI")
 
         # Recebe as info da ESP..
-        vel_left, vel_right = self.receiveData() # Adicionar mais segurança caso a fila estaj vazia 
+        self.receiveData() # Adicionar mais segurança caso a fila estaj vazia 
         #...
         # Trata os dados pro formato q o cmd_vel usa
 
-        self.current_angular_speed_z = (WHEEL_RADIUS_RIGHT * vel_right - WHEEL_RADIUS_LEFT * vel_left) / WHEEL_SEPARATION 
+        self.current_angular_speed_z = (WHEEL_RADIUS_RIGHT * self.vel_right - WHEEL_RADIUS_LEFT * self.vel_left) / WHEEL_SEPARATION 
         self.current_yaw += self.current_angular_speed_z * dt
         self.current_yaw = self.normalize_angle(self.current_yaw)
 
-        self.current_linear_speed_x = (WHEEL_RADIUS_RIGHT * vel_right + WHEEL_RADIUS_LEFT * vel_left) / 2 
+        self.current_linear_speed_x = (WHEEL_RADIUS_RIGHT * self.vel_right + WHEEL_RADIUS_LEFT * self.vel_left) / 2 
 
         self.current_x += self.current_linear_speed_x * math.cos(self.current_yaw) * dt
         self.current_y += self.current_linear_speed_x * math.sin(self.current_yaw) * dt
@@ -136,18 +132,18 @@ class HWInterface(Node): #Refazer
         q.w = math.cos(self.current_yaw / 2.0)
 
         msg = Odometry()
-        msg.header.stamp           =  self.get_clock().now.to_msg()
+        msg.header.stamp           =  self.get_clock().now().to_msg()
         msg.header.frame_id       =  "odom"
 
         msg.pose.pose.position.x  =  self.current_x
         msg.pose.pose.position.y  =  self.current_y
-        msg.pose.pose.position.z  =  0
+        msg.pose.pose.position.z  =  0.0
         msg.pose.pose.orientation =  q
 
         msg.child_frame_id        =  "base_link"
         
         msg.twist.twist.linear.x  =  self.current_linear_speed_x
-        msg.twist.twist.linear.y  =  0
+        msg.twist.twist.linear.y  =  0.0
         msg.twist.twist.angular.z =  self.current_angular_speed_z
         
         self.odom_pub.publish(msg)

@@ -9,6 +9,7 @@ from Movement.robot_constants import *
 
 
 
+
 class Walk(Node): #Basicamente me retorna só as velocidades que cada roda deveria estar
     def __init__(self):
         super().__init__('Walk')
@@ -132,10 +133,10 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         # --- AQUI ESTÁ O "DEFEITO" DE SOFTWARE ---
         # Um viés constante simulando que o motor direito/esquerdo tem potências diferentes.
         # Se for 0.0, ele anda reto. Um valor como 0.03 ou 0.05 vai forçar o robô a entortar.
-        motor_bias = 0.04  # rad/s (tente valores entre 0.02 e 0.08)
+        #motor_bias = 0.04  # rad/s (tente valores entre 0.02 e 0.08)
 
         # O PID calcula a correção, mas o 'motor_bias' empurra o robô para fora da linha
-        cmd.angular.z = self.angularPID(self.target_yaw, dt) + motor_bias
+        cmd.angular.z = self.angularPID(self.target_yaw, dt) #+ motor_bias
         self.cmd_pub.publish(cmd)
 
     def angularPID(self, target_angle, dt):

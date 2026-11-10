@@ -34,7 +34,7 @@ setup(
     entry_points={
         'console_scripts': [
             'walk = Movement.walk:main',
-            'esp = Movement.fake_esp:main',
+            'esp = Movement.esp:main',
             'hwinterface = Movement.hwinterface:main',
         ],
     },

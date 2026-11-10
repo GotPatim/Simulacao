@@ -1,0 +1,3 @@
+Mesmo com o PID ele continua andando reto mas torto na reta, resolver isso e ja está bom a parte do andar forçado
+
+Comecar a ver visão

@@ -1,3 +1,4 @@
+/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/esp_ideal_world.sdf
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/esp_robot_world.sdf
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/worlds/robot_world.sdf
 /home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim/share/robot_sim/config/bridge.yaml

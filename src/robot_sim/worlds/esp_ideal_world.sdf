@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="robot_world">
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+
+    
+    <light type="directional" name="sun">
+      <direction>-0.5 0.1 -0.9</direction>
+      <diffuse>1 1 1 1</diffuse>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+    <!-- Chão -->
+    <model name="ground">
+      <static>true</static>
+      <link name="link">
+        <collision name="c">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="v">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Pista Vermelha com Linha Branca -->
+    <model name="track">
+      <static>true</static>
+
+      <link name="asphalt">
+
+        <visual name="bottom">
+          <pose>1 0 0.001 0 0 0</pose>
+          <geometry>
+            <box><size>2.4 0.4 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="right">
+          <pose>2 0.5 0.001 0 0 0</pose>
+          <geometry>
+            <box><size>0.4 1.4 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="top">
+          <pose>1 1 0.001 0 0 0</pose>
+          <geometry>
+            <box><size>2.4 0.4 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="left">
+          <pose>0 0.5 0.001 0 0 0</pose>
+          <geometry>
+            <box><size>0.4 1.4 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+
+      <link name="centerline">
+
+        <visual name="bottom">
+          <pose>1 0 0.003 0 0 0</pose>
+          <geometry>
+            <box><size>2.02 0.02 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="right">
+          <pose>2 0.5 0.003 0 0 0</pose>
+          <geometry>
+            <box><size>0.02 1.02 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="top">
+          <pose>1 1 0.003 0 0 0</pose>
+          <geometry>
+            <box><size>2.02 0.02 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="left">
+          <pose>0 0.5 0.003 0 0 0</pose>
+          <geometry>
+            <box><size>0.02 1.02 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+
+      <link name="start_pad">
+        <visual name="pad">
+          <pose>0 0 0.005 0 0 0</pose>
+          <geometry>
+            <box><size>0.36 0.28 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0.8 0 1</ambient>
+            <diffuse>0 0.8 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+
+    </model>
+
+    <!-- Robô -->
+    <model name="robot">
+      <pose>0 0 0.05 0 0 0</pose>
+
+      <!-- Chassis / Base Link -->
+      <link name="base_link">
+        <pose>0 0 0.1 0 0 0</pose>
+
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>0.00417</ixx>
+            <iyy>0.00833</iyy>
+            <izz>0.0108</izz>
+          </inertia>
+        </inertial>
+
+        <collision name="c">
+          <geometry>
+            <box><size>0.3 0.2 0.1</size></box>
+          </geometry>
+        </collision>
+
+        <visual name="v">
+          <geometry>
+            <box><size>0.3 0.2 0.1</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0.4 1 1</ambient>
+            <diffuse>0 0.4 1 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- Roda boba (caster) -->
+        <collision name="caster">
+          <pose>-0.12 0 -0.05 0 0 0</pose>
+          <geometry>
+            <sphere><radius>0.05</radius></sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+
+      </link>
+
+      <!-- Roda Esquerda -->
+      <link name="left_wheel">
+        <pose>0.0 0.10 0.05 -1.5707 0 0</pose>
+
+        <inertial>
+          <mass>0.2</mass>
+          <inertia>
+            <ixx>0.00014</ixx>
+            <iyy>0.00014</iyy>
+            <izz>0.00025</izz>
+          </inertia>
+        </inertial>
+
+        <collision name="c">
+          <geometry>
+            <cylinder>
+              <radius>0.05</radius>
+              <length>0.03</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.0</mu>
+                <mu2>1.0</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+
+        <visual name="v">
+          <geometry>
+            <cylinder>
+              <radius>0.05</radius>
+              <length>0.03</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+
+      <!-- Roda Direita -->
+      <link name="right_wheel">
+        <pose>0.0 -0.10 0.05 -1.5707 0 0</pose>
+
+        <inertial>
+          <mass>0.2</mass>
+          <inertia>
+            <ixx>0.00014</ixx>
+            <iyy>0.00014</iyy>
+            <izz>0.00025</izz>
+          </inertia>
+        </inertial>
+
+        <collision name="c">
+          <geometry>
+            <cylinder>
+              <radius>0.05</radius>
+              <length>0.03</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.0</mu>
+                <mu2>1.0</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+
+        <visual name="v">
+          <geometry>
+            <cylinder>
+              <radius>0.05</radius>
+              <length>0.03</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+
+      <!-- Juntas -->
+      <joint name="left_wheel_joint" type="revolute">
+        <parent>base_link</parent>
+        <child>left_wheel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e16</lower>
+            <upper>1e16</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="right_wheel_joint" type="revolute">
+        <parent>base_link</parent>
+        <child>right_wheel</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e16</lower>
+            <upper>1e16</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <!-- Plugin DiffDrive -->
+      <plugin filename="gz-sim-diff-drive-system"
+              name="gz::sim::systems::DiffDrive">
+
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+
+        <wheel_separation>0.20</wheel_separation>
+        <wheel_radius>0.05</wheel_radius>
+
+        <odom_publish_frequency>50</odom_publish_frequency>
+
+        <topic>/gz_cmd_vel</topic>
+        <odom_topic>/odom</odom_topic>
+        <tf_topic>/tf</tf_topic>
+
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_link</child_frame_id>
+
+      </plugin>
+
+      <!-- Plugin JointStatePublisher -->
+      <plugin filename="gz-sim-joint-state-publisher-system"
+              name="gz::sim::systems::JointStatePublisher">
+        <topic>joint_states</topic>
+      </plugin>
+
+    </model>
+
+  </world>
+</sdf>
