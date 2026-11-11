@@ -7,7 +7,7 @@ from sensor_msgs.msg import JointState
 
 
 # Só para testes do HWInterface
-
+# 360 ticks por rotação
 class FakeESP(Node):
     def __init__(self):
         super().__init__('fake_esp')

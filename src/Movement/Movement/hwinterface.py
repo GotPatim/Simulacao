@@ -13,6 +13,9 @@ import time
 SERIAL_PORT = '/tmp/ttyHW'
 BAUD_RATE = 115200
 
+
+#Encoder tem 360 ticks/volta
+# raio da roda é 0.05m
 class HWInterface(Node): #Refazer 
     # Vai receber 2 velocidades da esp(direita e esquerda)
     # Vai converter pro que a odometria entende ( linear e angular)
@@ -35,7 +38,6 @@ class HWInterface(Node): #Refazer
             self.odom_pub =  self.create_publisher(Odometry,"/odom", 50)
 
             self.create_timer(0.02, self.calcOdom) # posta a odometria pro cmd a 50hz
-            self.get_logger().info(f"ABAXACI")
 
 
         except serial.SerialException as e:
@@ -53,6 +55,10 @@ class HWInterface(Node): #Refazer
         self.current_x = 0
         self.current_y = 0
         self.current_yaw = 0
+        self.ticks_left = 0
+        self.ticks_right = 0
+        self.ticks_left_last = 0.0
+        self.ticks_right_last = 0.0
         
         #   Speed
         self.current_linear_speed_x = 0
@@ -91,6 +97,15 @@ class HWInterface(Node): #Refazer
                 self.vel_left = float(info[3])
                 self.vel_right = float(info[4])
 
+                # pega a variação do encoder
+                self.ticks_left =  float(info[1]) - self.ticks_left_last
+                self.ticks_right =  float(info[2]) - self.ticks_right_last 
+
+
+                # Guarda a posição do encoder na ultima leitura
+                self.ticks_left_last = float(info[1])
+                self.ticks_right_last = float(info[2])
+
 
     def calcOdom(self): 
         # Recebe a velocidade dos motores e calcula: 
@@ -103,7 +118,6 @@ class HWInterface(Node): #Refazer
 
         current_time = self.get_clock().now().nanoseconds / 1e9
         dt = current_time - self.last_time
-        self.get_logger().info(f"ABAXACI")
 
         # Recebe as info da ESP..
         self.receiveData() # Adicionar mais segurança caso a fila estaj vazia 
@@ -111,14 +125,42 @@ class HWInterface(Node): #Refazer
         # Trata os dados pro formato q o cmd_vel usa
 
         self.current_angular_speed_z = (WHEEL_RADIUS_RIGHT * self.vel_right - WHEEL_RADIUS_LEFT * self.vel_left) / WHEEL_SEPARATION 
-        self.current_yaw += self.current_angular_speed_z * dt
-        self.current_yaw = self.normalize_angle(self.current_yaw)
 
         self.current_linear_speed_x = (WHEEL_RADIUS_RIGHT * self.vel_right + WHEEL_RADIUS_LEFT * self.vel_left) / 2 
 
-        self.current_x += self.current_linear_speed_x * math.cos(self.current_yaw) * dt
-        self.current_y += self.current_linear_speed_x * math.sin(self.current_yaw) * dt
+#        self.current_x += self.current_linear_speed_x * math.cos(self.current_yaw) * dt
+#        self.current_y += self.current_linear_speed_x * math.sin(self.current_yaw) * dt
+        circumferencia_left = 2 * math.pi * WHEEL_RADIUS_LEFT
+        circumferencia_right = 2 * math.pi * WHEEL_RADIUS_RIGHT
 
+        current_time = self.get_clock().now().nanoseconds / 1e9
+        dt = current_time - self.last_time
+
+        # Recebe as info da ESP..
+        self.receiveData() # Adicionar mais segurança caso a fila estaj vazia 
+        #...
+        # Trata os dados pro formato q o cmd_vel usa
+
+        self.current_angular_speed_z = (WHEEL_RADIUS_RIGHT * self.vel_right - WHEEL_RADIUS_LEFT * self.vel_left) / WHEEL_SEPARATION 
+
+        self.current_linear_speed_x = (WHEEL_RADIUS_RIGHT * self.vel_right + WHEEL_RADIUS_LEFT * self.vel_left) / 2 
+
+#        self.current_x += self.current_linear_speed_x * math.cos(self.current_yaw) * dt
+#        self.current_y += self.current_linear_speed_x * math.sin(self.current_yaw) * dt
+        circumferencia_left = 2 * math.pi * WHEEL_RADIUS_LEFT
+        circumferencia_right = 2 * math.pi * WHEEL_RADIUS_RIGHT
+
+        pos_left = (self.ticks_left / TICKS_VOLTA) * circumferencia_left
+        pos_right = (self.ticks_right / TICKS_VOLTA) * circumferencia_right
+        pos = (pos_left + pos_right) / 2
+        
+        yaw = (pos_right - pos_left) / WHEEL_SEPARATION
+        self.current_x +=  pos * math.cos(self.current_yaw + (yaw/2))
+        self.current_y +=  pos * math.sin(self.current_yaw + (yaw/2))
+        
+        self.current_yaw += yaw
+        self.current_yaw = self.normalize_angle(self.current_yaw)
+        
         self.last_time = current_time
 
         # Preparing to publish

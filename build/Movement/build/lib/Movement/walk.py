@@ -68,16 +68,6 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.last_error = 0.0
 
     def odomCallback(self, msg): # só atribui os valores as variaveis certas
-#        p = msg.pose.pose.position
-#        q = msg.pose.pose.orientation
-#        t = msg.twist.twist
-
-#        self.get_logger().info(
-#            f"[ODOM] pos=({p.x:.3f}, {p.y:.3f}, {p.z:.3f}) "
-#            f"quat=({q.x:.3f}, {q.y:.3f}, {q.z:.3f}, {q.w:.3f}) "
-#            f"v=({t.linear.x:.3f}, {t.linear.y:.3f}) w={t.angular.z:.3f}",
-#            throttle_duration_sec=0.5)
-
         self.current_x = msg.pose.pose.position.x
         self.current_y = msg.pose.pose.position.y
 
@@ -100,9 +90,6 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
             self.instructions_step = 0
         instruction = self.instructions[self.instructions_step][0]
         value = self.instructions[self.instructions_step][1]
-
-#        self.get_logger().info(f"yaw={self.current_yaw:.3f} dist={self.dist_projected:.2f}")
-
         if(instruction == "FOWARD"):
             if(self.starting_walk == True):
                 self.starting_walk = False
@@ -115,8 +102,25 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
 
     def moveStraight(self, target_distance): # ------- OK # Principalmente acha a velocidade angular que o robo deve ter pra se manter reto
+        remaining = target_distance - self.dist_projected
+
+        # Rampa: 1.0 longe, cai linearmente até MIN_FACTOR perto do alvo
+            
+        ACCEL_DIST = 0.5     # metros para chegar na velocidade cheia
+        DECEL_DIST = 1.0     # metros antes do alvo para começar a frear
+        START_FACTOR = 0.2   # velocidade inicial (20%)
+        MIN_FACTOR = 0.15    # piso na chegada
+
+        # Rampa de subida: 0.2 -> 1.0 ao longo dos primeiros 0.5 m
+        up = START_FACTOR + (1.0 - START_FACTOR) * (self.dist_projected / ACCEL_DIST)
+
+        # Rampa de descida: 1.0 -> piso nos últimos 1.5 m
+        down = remaining / DECEL_DIST
+
+        fator = max(MIN_FACTOR, min(1.0, up, down))
+
         cmd = Twist()
-        cmd.linear.x = ROBOT_CENTER_SPEED 
+        cmd.linear.x = ROBOT_CENTER_SPEED * fator
     
         current_time = self.get_clock().now().nanoseconds / 1e9
 
@@ -128,6 +132,9 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         
         dx = self.current_x - self.start_x 
         dy = self.current_y - self.start_y
+
+        self.get_logger().info(f"dx={dx:.3f} dy = {dy:.3f} dist={self.dist_projected:.2f}")
+
 
         self.dist_projected = dx * math.cos(self.target_yaw) + dy * math.sin(self.target_yaw) #---> Vem da algebra Linear, dessa forma não considera a parte que o robo andou sem ser para o objetivo 
 
@@ -144,14 +151,8 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
         self.last_time = current_time
 
-
-        # --- AQUI ESTÁ O "DEFEITO" DE SOFTWARE ---
-        # Um viés constante simulando que o motor direito/esquerdo tem potências diferentes.
-        # Se for 0.0, ele anda reto. Um valor como 0.03 ou 0.05 vai forçar o robô a entortar.
-        #motor_bias = 0.04  # rad/s (tente valores entre 0.02 e 0.08)
-
         # O PID calcula a correção, mas o 'motor_bias' empurra o robô para fora da linha
-        cmd.angular.z = self.angularPID(self.target_yaw, dt) #+ motor_bias
+        cmd.angular.z = self.angularPID(self.target_yaw, dt) 
         self.cmd_pub.publish(cmd)
 
     def angularPID(self, target_angle, dt):
@@ -204,9 +205,11 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         max_turn_speed = 1.5 # rad/s
         cmd.angular.z = max(min(pid_output, max_turn_speed), -max_turn_speed)
 
+        self.get_logger().info(f"yaw={self.current_yaw:.3f} target_yaw = {self.target_yaw:.3f} dist={self.dist_projected:.2f}")
+
         error = math.atan2(math.sin(self.target_yaw - self.current_yaw), # calcula o erro da rotação(msm jeito q calcula o da velocidade)
                            math.cos(self.target_yaw - self.current_yaw))
-        if abs(error) > 0.02: # keeps turning until it reaches the target angle
+        if abs(error) > 0.017: # keeps turning until it reaches the target angle
             self.cmd_pub.publish(cmd)
         else: # para de gira
             cmd.angular.z = 0.0

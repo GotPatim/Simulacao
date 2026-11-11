@@ -1,5 +1,6 @@
 Mesmo com o PID ele continua andando reto mas torto na reta, resolver isso e ja está bom a parte do andar forçado
 -> O problema pode ser amenizado usando velocidades menores
 -> O problema pode ser amenizado usando os valores do encoder invés de v * dt
+-> Fazer o robo andar rapido no meio da pista e no final (perto da curva) desacelerar
 
 Comecar a ver visão
