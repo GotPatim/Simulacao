@@ -40,6 +40,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.starting_turn = False
         self.starting_walk = True
         self.last_time = None
+        self.first_lap = True
 
         #   Current Position
         self.current_x = 0
@@ -48,6 +49,12 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.dist_projected = 0
         self.start_x = 0
         self.start_y = 0
+
+        #Turn
+        self.yaw_vel = 0.8
+        self.curve_radius = 0.2   # v = 0.8*0.2 = 0.16 m/s, corte ~0.08 m
+        self.turn_approx = 89.0      # graus, para antes de passar
+        self.pause_until = None
         
         #   Target Position 
         self.target_x = 0 # To the sides
@@ -58,6 +65,13 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.current_linear_speed_x = 0
         self.current_linear_speed_y = 0
         self.current_angular_speed_z = 0 # rad/s
+
+        # Desvio Lateral
+        self.ref_x = None      # canto ideal atual do retângulo
+        self.ref_y = None
+        self.segment_len = 0.0
+        self.k_ct = 0.8        # ganho do erro lateral
+        self.max_ct_angle = 0.4  # rad, limite da correção
 
         # PID
         self.kp = 2.0
@@ -75,8 +89,10 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         roll, pitch, yaw = transforms3d.euler.quat2euler((q.w,q.x,q.y,q.z))
 
         self.current_yaw = yaw
-        if(self.first_run): # inicializa esse angulo "zerado" como o padrão
+        if self.first_run:
             self.target_yaw = yaw
+            self.ref_x = self.current_x
+            self.ref_y = self.current_y
             self.first_run = False
 
         #Velocidade de cada roda
@@ -86,8 +102,18 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
 
     def movementLoop(self): # ------- OK
+        now = self.get_clock().now().nanoseconds / 1e9
+        if self.pause_until is not None:
+            if now < self.pause_until:
+                return
+            self.pause_until = None
+        
+        if self.first_run:
+            return
+
         if(self.instructions_step == 8):
             self.instructions_step = 0
+            self.first_lap = False
         instruction = self.instructions[self.instructions_step][0]
         value = self.instructions[self.instructions_step][1]
         if(instruction == "FOWARD"):
@@ -95,7 +121,13 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
                 self.starting_walk = False
                 self.start_x = self.current_x
                 self.start_y = self.current_y
-            self.moveStraight(value)
+
+            if self.instructions_step == 0 and self.first_lap:
+                discount = self.curve_radius        # parte do canto
+            else:
+                discount = 2 * self.curve_radius
+            self.segment_len = value
+            self.moveStraight(value - discount)
         
         elif(instruction == "TURN"):
             self.turn_90(value)
@@ -133,27 +165,29 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         dx = self.current_x - self.start_x 
         dy = self.current_y - self.start_y
 
-        self.get_logger().info(f"dx={dx:.3f} dy = {dy:.3f} dist={self.dist_projected:.2f}")
-
 
         self.dist_projected = dx * math.cos(self.target_yaw) + dy * math.sin(self.target_yaw) #---> Vem da algebra Linear, dessa forma não considera a parte que o robo andou sem ser para o objetivo 
 
         #self.get_logger().info(f"dx={dx:.3f} x={self.current_x:.3f} y={self.current_y:.2f}  dist={self.dist_projected:.2f}  cos={math.cos(self.target_yaw):.2f}")
-        if(self.dist_projected >= target_distance):
+        if self.dist_projected >= target_distance:
             self.dist_projected = 0
-            self.last_error = 0.0
-            self.integral_error = 0.0
-            self.instructions_step += 1
-            self.starting_walk = True
             self.starting_turn = True
-            time.sleep(0.2)
+            self.ref_x += self.segment_len * math.cos(self.target_yaw)
+            self.ref_y += self.segment_len * math.sin(self.target_yaw)
+            self.finishSegment(0.5)
             return
 
         self.last_time = current_time
 
-        # O PID calcula a correção, mas o 'motor_bias' empurra o robô para fora da linha
-        cmd.angular.z = self.angularPID(self.target_yaw, dt) 
+        # erro lateral em relação à linha ideal (positivo = à esquerda)
+        lat = (-(self.current_x - self.ref_x) * math.sin(self.target_yaw)
+               + (self.current_y - self.ref_y) * math.cos(self.target_yaw))
+        correction = max(-self.max_ct_angle,
+                         min(self.max_ct_angle, math.atan(self.k_ct * lat)))
+
+        cmd.angular.z = self.angularPID(self.target_yaw - correction, dt)
         self.cmd_pub.publish(cmd)
+        self.get_logger().info(f"lat={lat:.3f} dist={self.dist_projected:.2f}")
 
     def angularPID(self, target_angle, dt):
         #PID
@@ -177,57 +211,37 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         return (P + I + D) #Velocidade angular z
 
 
-    def turn_90(self, direction): # ------- OK # direction deve ser +-1 pra significar se é sentido horario ou anti-horario
-        #adicionar algum mecanismo para garantir q antes dele girar 90 ele vai estar em cima da linha
-        cmd = Twist()
-        cmd.linear.x = 0.0
-        rotation = direction * math.pi / 2 # roda no sentido horario
-        self.current_angular_speed_z = direction * (ROBOT_CENTER_SPEED + ROBOT_CENTER_SPEED) / WHEEL_SEPARATION # com essa velocidade angular ele gira no lugar, supostamente
-
-        if(self.starting_turn):
-            self.target_yaw += rotation 
-            self.normalize_angle(self.target_yaw)
-            self.target_yaw = math.atan2(math.sin(self.target_yaw), math.cos(self.target_yaw))
+    def turn_90(self, direction):  # direction: +1 esquerda, -1 direita
+        if self.starting_turn:
+            self.target_yaw = self.normalize_angle(
+                self.target_yaw + direction * math.pi / 2)
             self.starting_turn = False
 
-            self.last_error = 0.0
-            self.integral_error = 0.0
-            self.last_time = self.get_clock().now().nanoseconds / 1e9
+        error = self.normalize_angle(self.current_yaw - self.target_yaw)
+        if abs(error) < 0.03:
+            self.finishSegment(1.0)
+            return
 
-        current_time = self.get_clock().now().nanoseconds / 1e9
-        dt = (current_time - self.last_time)
-        if dt <= 0: 
-            dt = 0.02 # Fallback de segurança para 50Hz
-        self.last_time = current_time
-        
-        pid_output = self.angularPID(self.target_yaw, dt)
-
-        max_turn_speed = 1.5 # rad/s
-        cmd.angular.z = max(min(pid_output, max_turn_speed), -max_turn_speed)
-
-        self.get_logger().info(f"yaw={self.current_yaw:.3f} target_yaw = {self.target_yaw:.3f} dist={self.dist_projected:.2f}")
-
-        error = math.atan2(math.sin(self.target_yaw - self.current_yaw), # calcula o erro da rotação(msm jeito q calcula o da velocidade)
-                           math.cos(self.target_yaw - self.current_yaw))
-        if abs(error) > 0.012: # keeps turning until it reaches the target angle
-            self.cmd_pub.publish(cmd)
-        else: # para de gira
-            cmd.angular.z = 0.0
-            self.cmd_pub.publish(cmd)
+        omega = direction * self.yaw_vel
+        cmd = Twist()
+        cmd.linear.x = abs(omega * self.curve_radius)  # feedforward
+        cmd.angular.z = omega
+        self.cmd_pub.publish(cmd)
 
 
-            self.last_error = 0.0
-            self.integral_error = 0.0
-            self.instructions_step += 1
-            self.starting_walk = True
-            self.starting_turn = True
-            time.sleep(0.2)
-    
     def normalize_angle(self, angle): # Limits the angle between -180 and 180
-            while angle > math.pi: angle -= 2.0 * math.pi
-            while angle < -math.pi: angle += 2.0 * math.pi
-            return angle
+        while angle > math.pi: angle -= 2.0 * math.pi
+        while angle < -math.pi: angle += 2.0 * math.pi
+        return angle
 
+    def finishSegment(self, pause):
+        self.cmd_pub.publish(Twist())   # zera a velocidade
+        self.pause_until = self.get_clock().now().nanoseconds / 1e9 + pause
+        self.instructions_step += 1
+        self.last_error = 0.0
+        self.integral_error = 0.0
+        self.last_time = None           # evita dt gigante na próxima reta
+        self.starting_walk = True
 
 def main(args=None):
     rclpy.init(args=args)

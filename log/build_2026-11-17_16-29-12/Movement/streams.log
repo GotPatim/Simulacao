@@ -1,0 +1,26 @@
+[6.223s] Invoking command in '/home/nicolas/Downloads/PB_Ros2.ws/src/Movement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/Movement build --build-base /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build install --record /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/install.log --install-scripts $base/lib/Movement --single-version-externally-managed install_data
+[8.320s] running egg_info
+[8.484s] writing ../../build/Movement/Movement.egg-info/PKG-INFO
+[8.486s] writing dependency_links to ../../build/Movement/Movement.egg-info/dependency_links.txt
+[8.489s] writing entry points to ../../build/Movement/Movement.egg-info/entry_points.txt
+[8.490s] writing requirements to ../../build/Movement/Movement.egg-info/requires.txt
+[8.490s] writing top-level names to ../../build/Movement/Movement.egg-info/top_level.txt
+[8.825s] reading manifest file '../../build/Movement/Movement.egg-info/SOURCES.txt'
+[8.830s] writing manifest file '../../build/Movement/Movement.egg-info/SOURCES.txt'
+[8.832s] running build
+[8.833s] running build_py
+[8.834s] copying Movement/walk.py -> /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement
+[8.837s] running install
+[8.876s] running install_lib
+[9.044s] copying /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement/walk.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement
+[9.048s] byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement/walk.py to walk.cpython-312.pyc
+[9.061s] running install_data
+[9.063s] running install_egg_info
+[9.235s] removing '/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement-0.0.0-py3.12.egg-info' (and everything under it)
+[9.238s] Copying ../../build/Movement/Movement.egg-info to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement-0.0.0-py3.12.egg-info
+[9.245s] running install_scripts
+[10.309s] Installing esp script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[10.311s] Installing hwinterface script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[10.314s] Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement
+[10.315s] writing list of installed files to '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/install.log'
+[10.517s] Invoked command in '/home/nicolas/Downloads/PB_Ros2.ws/src/Movement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/Movement build --build-base /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build install --record /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/install.log --install-scripts $base/lib/Movement --single-version-externally-managed install_data
