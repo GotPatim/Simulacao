@@ -52,7 +52,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
         #Turn
         self.yaw_vel = 0.8
-        self.curve_radius = 0.2   # v = 0.8*0.2 = 0.16 m/s, corte ~0.08 m
+        self.curve_radius = 0.0
         self.turn_approx = 89.0      # graus, para antes de passar
         self.pause_until = None
         
@@ -162,8 +162,8 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         
         dt = (current_time - self.last_time)
         
-        dx = self.current_x - self.start_x 
-        dy = self.current_y - self.start_y
+        dx = self.current_x - self.ref_x
+        dy = self.current_y - self.ref_y
 
 
         self.dist_projected = dx * math.cos(self.target_yaw) + dy * math.sin(self.target_yaw) #---> Vem da algebra Linear, dessa forma não considera a parte que o robo andou sem ser para o objetivo 
@@ -247,3 +247,4 @@ def main(args=None):
     rclpy.init(args=args)
     rclpy.spin(Walk())
     rclpy.shutdown()
+

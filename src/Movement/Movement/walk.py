@@ -29,7 +29,8 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
                              ("FOWARD", 13.0), 
                              ("TURN", LEFT), 
                              ("FOWARD", 9.0), 
-                             ("TURN", LEFT)] # Percurso q o robo precisa seguir
+                             ("TURN", LEFT),
+                             ("STOP", None)] # Percurso q o robo precisa seguir
         self.instructions_step = 0
         self.setupVariables()
 
@@ -52,13 +53,13 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
         #Turn
         self.yaw_vel = 0.8
-        self.curve_radius = 0.2   # v = 0.8*0.2 = 0.16 m/s, corte ~0.08 m
+        self.curve_radius = 0.0
         self.turn_approx = 89.0      # graus, para antes de passar
         self.pause_until = None
         
         #   Target Position 
-        self.target_x = 0 # To the sides
-        self.target_y = 0 # Foward
+        self.target_x = 0 
+        self.target_y = 0 
         self.target_yaw = 0
 
         #   Speed
@@ -123,7 +124,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
                 self.start_y = self.current_y
 
             if self.instructions_step == 0 and self.first_lap:
-                discount = self.curve_radius        # parte do canto
+                discount = self.curve_radius 
             else:
                 discount = 2 * self.curve_radius
             self.segment_len = value
@@ -131,12 +132,16 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         
         elif(instruction == "TURN"):
             self.turn_90(value)
+        elif(instruction == "STOP"):
+            while True:
+                self.get_logger().info(f"Fim do Percurso")
+
 
 
     def moveStraight(self, target_distance): # ------- OK # Principalmente acha a velocidade angular que o robo deve ter pra se manter reto
         remaining = target_distance - self.dist_projected
 
-        # Rampa: 1.0 longe, cai linearmente até MIN_FACTOR perto do alvo
+        # Rampa: 1.0 longe
             
         ACCEL_DIST = 0.5     # metros para chegar na velocidade cheia
         DECEL_DIST = 1.0     # metros antes do alvo para começar a frear
@@ -162,8 +167,8 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         
         dt = (current_time - self.last_time)
         
-        dx = self.current_x - self.start_x 
-        dy = self.current_y - self.start_y
+        dx = self.current_x - self.ref_x
+        dy = self.current_y - self.ref_y
 
 
         self.dist_projected = dx * math.cos(self.target_yaw) + dy * math.sin(self.target_yaw) #---> Vem da algebra Linear, dessa forma não considera a parte que o robo andou sem ser para o objetivo 
@@ -224,7 +229,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
 
         omega = direction * self.yaw_vel
         cmd = Twist()
-        cmd.linear.x = abs(omega * self.curve_radius)  # feedforward
+        cmd.linear.x = abs(omega * self.curve_radius) 
         cmd.angular.z = omega
         self.cmd_pub.publish(cmd)
 
@@ -247,3 +252,4 @@ def main(args=None):
     rclpy.init(args=args)
     rclpy.spin(Walk())
     rclpy.shutdown()
+
