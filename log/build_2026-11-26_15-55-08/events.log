@@ -1,0 +1,182 @@
+[0.000000] (-) TimerEvent: {}
+[0.002286] (-) JobUnselected: {'identifier': 'HelloWorld'}
+[0.002640] (-) JobUnselected: {'identifier': 'robot_sim'}
+[0.002875] (Movement) JobQueued: {'identifier': 'Movement', 'dependencies': OrderedDict()}
+[0.004677] (Movement) JobStarted: {'identifier': 'Movement'}
+[0.097927] (-) TimerEvent: {}
+[0.199148] (-) TimerEvent: {}
+[0.300749] (-) TimerEvent: {}
+[0.401984] (-) TimerEvent: {}
+[0.503119] (-) TimerEvent: {}
+[0.604471] (-) TimerEvent: {}
+[0.705982] (-) TimerEvent: {}
+[0.807200] (-) TimerEvent: {}
+[0.908555] (-) TimerEvent: {}
+[1.010509] (-) TimerEvent: {}
+[1.112051] (-) TimerEvent: {}
+[1.213215] (-) TimerEvent: {}
+[1.314536] (-) TimerEvent: {}
+[1.415864] (-) TimerEvent: {}
+[1.517044] (-) TimerEvent: {}
+[1.618100] (-) TimerEvent: {}
+[1.719383] (-) TimerEvent: {}
+[1.820657] (-) TimerEvent: {}
+[1.921981] (-) TimerEvent: {}
+[2.023295] (-) TimerEvent: {}
+[2.124379] (-) TimerEvent: {}
+[2.225532] (-) TimerEvent: {}
+[2.327544] (-) TimerEvent: {}
+[2.429285] (-) TimerEvent: {}
+[2.531297] (-) TimerEvent: {}
+[2.632679] (-) TimerEvent: {}
+[2.734243] (-) TimerEvent: {}
+[2.835418] (-) TimerEvent: {}
+[2.936632] (-) TimerEvent: {}
+[3.037977] (-) TimerEvent: {}
+[3.139944] (-) TimerEvent: {}
+[3.241028] (-) TimerEvent: {}
+[3.342884] (-) TimerEvent: {}
+[3.444073] (-) TimerEvent: {}
+[3.545175] (-) TimerEvent: {}
+[3.646341] (-) TimerEvent: {}
+[3.747557] (-) TimerEvent: {}
+[3.848721] (-) TimerEvent: {}
+[3.950009] (-) TimerEvent: {}
+[4.051041] (-) TimerEvent: {}
+[4.152089] (-) TimerEvent: {}
+[4.253350] (-) TimerEvent: {}
+[4.354597] (-) TimerEvent: {}
+[4.455865] (-) TimerEvent: {}
+[4.557099] (-) TimerEvent: {}
+[4.658624] (-) TimerEvent: {}
+[4.760458] (-) TimerEvent: {}
+[4.861649] (-) TimerEvent: {}
+[4.962963] (-) TimerEvent: {}
+[5.064308] (-) TimerEvent: {}
+[5.165663] (-) TimerEvent: {}
+[5.266991] (-) TimerEvent: {}
+[5.368642] (-) TimerEvent: {}
+[5.470118] (-) TimerEvent: {}
+[5.571436] (-) TimerEvent: {}
+[5.672871] (-) TimerEvent: {}
+[5.774036] (-) TimerEvent: {}
+[5.875338] (-) TimerEvent: {}
+[5.976671] (-) TimerEvent: {}
+[6.078362] (-) TimerEvent: {}
+[6.179708] (-) TimerEvent: {}
+[6.280958] (-) TimerEvent: {}
+[6.382257] (-) TimerEvent: {}
+[6.483507] (-) TimerEvent: {}
+[6.584997] (-) TimerEvent: {}
+[6.686649] (-) TimerEvent: {}
+[6.788003] (-) TimerEvent: {}
+[6.889762] (-) TimerEvent: {}
+[6.990965] (-) TimerEvent: {}
+[7.092033] (-) TimerEvent: {}
+[7.193126] (-) TimerEvent: {}
+[7.294338] (-) TimerEvent: {}
+[7.395542] (-) TimerEvent: {}
+[7.496716] (-) TimerEvent: {}
+[7.597976] (-) TimerEvent: {}
+[7.699630] (-) TimerEvent: {}
+[7.800852] (-) TimerEvent: {}
+[7.902057] (-) TimerEvent: {}
+[8.003553] (-) TimerEvent: {}
+[8.104944] (-) TimerEvent: {}
+[8.206074] (-) TimerEvent: {}
+[8.307058] (-) TimerEvent: {}
+[8.408394] (-) TimerEvent: {}
+[8.509655] (-) TimerEvent: {}
+[8.611016] (-) TimerEvent: {}
+[8.712409] (-) TimerEvent: {}
+[8.813550] (-) TimerEvent: {}
+[8.914925] (-) TimerEvent: {}
+[9.016092] (-) TimerEvent: {}
+[9.117397] (-) TimerEvent: {}
+[9.156252] (Movement) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/Movement', 'build', '--build-base', '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build', 'install', '--record', '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/install.log', '--install-scripts', '$base/lib/Movement', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nicolas/Downloads/PB_Ros2.ws/src/Movement', 'env': OrderedDict({'PROFILEHOME': '', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'KDE_FULL_SESSION': 'true', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': '', 'USER': 'nicolas', 'PAM_KWALLET5_LOGIN': '/run/user/1000/kwallet5.socket', 'LC_TIME': 'pt_BR.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '1971', 'XDG_SESSION_TYPE': 'x11', 'XCURSOR_SIZE': '24', 'KONSOLE_VERSION': '230805', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nicolas', 'KDE_APPLICATIONS_AS_SCOPE': '1', 'OLDPWD': '/home/nicolas', 'DESKTOP_SESSION': 'plasma', 'ROS_PYTHON_VERSION': '3', 'SHELL_SESSION_ID': 'c5bfb0b958164081b3a2dc8865ff3945', 'GTK_RC_FILES': '/etc/gtk/gtkrc:/home/nicolas/.gtkrc:/home/nicolas/.config/gtkrc', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'KDE_SESSION_VERSION': '5', 'LC_MONETARY': 'pt_BR.UTF-8', 'KONSOLE_DBUS_SESSION': '/Sessions/2', 'MANAGERPID': '1808', 'LC_CTYPE': 'pt_BR.UTF-8', 'SYSTEMD_EXEC_PID': '2284', 'SSH_ASKPASS': '/usr/bin/ksshaskpass', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/nicolas/Downloads/PB_Ros2.ws/install', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'nicolas', 'WINDOWID': '10485773', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'JOURNAL_STREAM': '8:6785', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'COLORFGBG': '15;0', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'GTK2_RC_FILES': '/etc/gtk-2.0/gtkrc:/home/nicolas/.gtkrc-2.0:/home/nicolas/.config/gtkrc-2.0', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nicolas/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/nicolas/.local/bin:/home/nicolas/.local/bin', 'SESSION_MANAGER': 'local/nicolas-Vivobook-ASUSLaptop-M1502YA-M1502YA:@/tmp/.ICE-unix/2203,unix/nicolas-Vivobook-ASUSLaptop-M1502YA-M1502YA:/tmp/.ICE-unix/2203', 'INVOCATION_ID': '7bc8ad4274234bfc9cdf47832007a4e3', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session1', 'LC_ADDRESS': 'pt_BR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XCURSOR_THEME': 'Sweet-cursors', 'ICEAUTHORITY': '/run/user/1000/iceauth_onihfI', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'KDE', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'KDE', 'XAUTHORITY': '/tmp/xauth_nAupHi', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/tmp/ssh-2iZpF59y4HdT/agent.1877', 'AMENT_PREFIX_PATH': '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'KONSOLE_DBUS_SERVICE': ':1.125', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'XDG_VTNR': '2', 'PWD': '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement', 'XDG_CONFIG_DIRS': '/home/nicolas/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings', 'CLUTTER_IM_MODULE': 'ibus', 'XDG_DATA_DIRS': '/usr/share/plasma:/usr/share/gnome:/home/nicolas/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages:/home/nicolas/Downloads/PB_Ros2.ws/install/HelloWorld/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'KDE_SESSION_UID': '1000', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/home/nicolas/Downloads/PB_Ros2.ws/install/robot_sim:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[9.217671] (-) TimerEvent: {}
+[9.318993] (-) TimerEvent: {}
+[9.420392] (-) TimerEvent: {}
+[9.521641] (-) TimerEvent: {}
+[9.623096] (-) TimerEvent: {}
+[9.724859] (-) TimerEvent: {}
+[9.826672] (-) TimerEvent: {}
+[9.927755] (-) TimerEvent: {}
+[10.029017] (-) TimerEvent: {}
+[10.130293] (-) TimerEvent: {}
+[10.231600] (-) TimerEvent: {}
+[10.332929] (-) TimerEvent: {}
+[10.434422] (-) TimerEvent: {}
+[10.536053] (-) TimerEvent: {}
+[10.637263] (-) TimerEvent: {}
+[10.738505] (-) TimerEvent: {}
+[10.839629] (-) TimerEvent: {}
+[10.941160] (-) TimerEvent: {}
+[11.042582] (-) TimerEvent: {}
+[11.143888] (-) TimerEvent: {}
+[11.245112] (-) TimerEvent: {}
+[11.346691] (-) TimerEvent: {}
+[11.447883] (-) TimerEvent: {}
+[11.549026] (-) TimerEvent: {}
+[11.650438] (-) TimerEvent: {}
+[11.751920] (-) TimerEvent: {}
+[11.853053] (-) TimerEvent: {}
+[11.954215] (-) TimerEvent: {}
+[12.055583] (-) TimerEvent: {}
+[12.069434] (Movement) StdoutLine: {'line': b'running egg_info\n'}
+[12.156002] (-) TimerEvent: {}
+[12.257259] (-) TimerEvent: {}
+[12.287298] (Movement) StdoutLine: {'line': b'writing ../../build/Movement/Movement.egg-info/PKG-INFO\n'}
+[12.291091] (Movement) StdoutLine: {'line': b'writing dependency_links to ../../build/Movement/Movement.egg-info/dependency_links.txt\n'}
+[12.293539] (Movement) StdoutLine: {'line': b'writing entry points to ../../build/Movement/Movement.egg-info/entry_points.txt\n'}
+[12.295439] (Movement) StdoutLine: {'line': b'writing requirements to ../../build/Movement/Movement.egg-info/requires.txt\n'}
+[12.297143] (Movement) StdoutLine: {'line': b'writing top-level names to ../../build/Movement/Movement.egg-info/top_level.txt\n'}
+[12.357567] (-) TimerEvent: {}
+[12.458734] (-) TimerEvent: {}
+[12.560233] (-) TimerEvent: {}
+[12.661467] (-) TimerEvent: {}
+[12.741104] (Movement) StdoutLine: {'line': b"reading manifest file '../../build/Movement/Movement.egg-info/SOURCES.txt'\n"}
+[12.748807] (Movement) StdoutLine: {'line': b"writing manifest file '../../build/Movement/Movement.egg-info/SOURCES.txt'\n"}
+[12.751264] (Movement) StdoutLine: {'line': b'running build\n'}
+[12.753519] (Movement) StdoutLine: {'line': b'running build_py\n'}
+[12.755878] (Movement) StdoutLine: {'line': b'copying Movement/walk.py -> /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement\n'}
+[12.760014] (Movement) StdoutLine: {'line': b'running install\n'}
+[12.761676] (-) TimerEvent: {}
+[12.813902] (Movement) StdoutLine: {'line': b'running install_lib\n'}
+[12.862012] (-) TimerEvent: {}
+[12.963299] (-) TimerEvent: {}
+[13.039599] (Movement) StdoutLine: {'line': b'copying /home/nicolas/Downloads/PB_Ros2.ws/build/Movement/build/lib/Movement/walk.py -> /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement\n'}
+[13.050402] (Movement) StdoutLine: {'line': b'byte-compiling /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement/walk.py to walk.cpython-312.pyc\n'}
+[13.063530] (-) TimerEvent: {}
+[13.073066] (Movement) StdoutLine: {'line': b'running install_data\n'}
+[13.076370] (Movement) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.163963] (-) TimerEvent: {}
+[13.265427] (-) TimerEvent: {}
+[13.310433] (Movement) StdoutLine: {'line': b"removing '/home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[13.317004] (Movement) StdoutLine: {'line': b'Copying ../../build/Movement/Movement.egg-info to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/python3.12/site-packages/Movement-0.0.0-py3.12.egg-info\n'}
+[13.329005] (Movement) StdoutLine: {'line': b'running install_scripts\n'}
+[13.365620] (-) TimerEvent: {}
+[13.467427] (-) TimerEvent: {}
+[13.569456] (-) TimerEvent: {}
+[13.670612] (-) TimerEvent: {}
+[13.771957] (-) TimerEvent: {}
+[13.873605] (-) TimerEvent: {}
+[13.975509] (-) TimerEvent: {}
+[14.076859] (-) TimerEvent: {}
+[14.177934] (-) TimerEvent: {}
+[14.279058] (-) TimerEvent: {}
+[14.380098] (-) TimerEvent: {}
+[14.481259] (-) TimerEvent: {}
+[14.582439] (-) TimerEvent: {}
+[14.683685] (-) TimerEvent: {}
+[14.785025] (-) TimerEvent: {}
+[14.788500] (Movement) StdoutLine: {'line': b'Installing esp script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement\n'}
+[14.790588] (Movement) StdoutLine: {'line': b'Installing hwinterface script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement\n'}
+[14.793671] (Movement) StdoutLine: {'line': b'Installing walk script to /home/nicolas/Downloads/PB_Ros2.ws/install/Movement/lib/Movement\n'}
+[14.798365] (Movement) StdoutLine: {'line': b"writing list of installed files to '/home/nicolas/Downloads/PB_Ros2.ws/build/Movement/install.log'\n"}
+[14.885411] (-) TimerEvent: {}
+[14.988085] (Movement) CommandEnded: {'returncode': 0}
+[14.991893] (-) TimerEvent: {}
+[15.094356] (-) TimerEvent: {}
+[15.106325] (Movement) JobEnded: {'identifier': 'Movement', 'rc': 0}
+[15.113515] (-) EventReactorShutdown: {}

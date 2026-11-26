@@ -41,7 +41,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         self.starting_turn = False
         self.starting_walk = True
         self.last_time = None
-        self.first_lap = True
+        self.finished = False
 
         #   Current Position
         self.current_x = 0
@@ -112,9 +112,6 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         if self.first_run:
             return
 
-        if(self.instructions_step == 8):
-            self.instructions_step = 0
-            self.first_lap = False
         instruction = self.instructions[self.instructions_step][0]
         value = self.instructions[self.instructions_step][1]
         if(instruction == "FOWARD"):
@@ -123,7 +120,7 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
                 self.start_x = self.current_x
                 self.start_y = self.current_y
 
-            if self.instructions_step == 0 and self.first_lap:
+            if self.instructions_step == 0:
                 discount = self.curve_radius 
             else:
                 discount = 2 * self.curve_radius
@@ -133,8 +130,10 @@ class Walk(Node): #Basicamente me retorna só as velocidades que cada roda dever
         elif(instruction == "TURN"):
             self.turn_90(value)
         elif(instruction == "STOP"):
-            while True:
-                self.get_logger().info(f"Fim do Percurso")
+            self.cmd_pub.publish(Twist())   # velocidade zero
+            if not self.finished:
+                self.finished = True
+                self.get_logger().info("Fim do Percurso")
 
 
 
