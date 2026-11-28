@@ -1,0 +1,8 @@
+# ROS 2
+ros2/build/
+ros2/install/
+ros2/log/
+
+# Arquivos temporários
+__pycache__/
+*.pycss

@@ -1,1 +1,0 @@
-/home/nicolas/Downloads/PB_Ros2.ws/build/robot_sim/ament_cmake_environment_hooks/local_setup.sh
